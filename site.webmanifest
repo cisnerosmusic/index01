@@ -1,0 +1,14 @@
+{
+  "name": "Index01",
+  "short_name": "Index01",
+  "description": "Web Design, SEO y AEO desde Miami. Construido para ser la respuesta que dan los buscadores y los asistentes de IA.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090A0E",
+  "theme_color": "#090A0E",
+  "lang": "es",
+  "icons": [
+    { "src": "/assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

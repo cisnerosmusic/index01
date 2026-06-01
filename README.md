@@ -1,90 +1,73 @@
-# Index01.net
+# Index01 - sitio web
 
-**Web Design • SEO • AEO (AI Engine Optimization)**
+Sitio oficial de Index01 (Web Design, SEO y AEO desde Miami). HTML estatico, rapido, sin frameworks. Pensado para GitHub Pages con dominio propio `index01.net`.
 
-Index01 is a Miami-based web design studio focused on helping small businesses, professionals, artists, and entrepreneurs build a strong online presence.
+## Estructura
 
-We create websites designed not only for people, but also for search engines and AI assistants.
+```
+index01/
+  index.html              HOME
+  services.html           SERVICES
+  process.html            PROCESS
+  maintenance.html        MAINTENANCE
+  contact.html            CONTACT
+  sitemap.xml             mapa del sitio (5 URLs)
+  robots.txt              permite todos los crawlers, incluidos los de IA
+  llms.txt                resumen del sitio para asistentes de IA (clave para AEO)
+  humans.txt              creditos
+  site.webmanifest        PWA / iconos
+  favicon.ico             favicon multi-tamano
+  CNAME                   dominio: index01.net
+  .nojekyll               evita el procesado Jekyll de GitHub Pages
+  assets/
+    css/styles.css        sistema de diseno completo
+    js/main.js            menu movil, ano automatico, animacion al hacer scroll
+    img/                  favicon (svg + png), apple-touch, icon-512, og-image
+```
 
-## What We Do
+## Antes de publicar: cosas que debes cambiar
 
-* Website Design
-* SEO (Search Engine Optimization)
-* AEO (AI Engine Optimization)
-* Technical SEO
-* Structured Data (Schema.org)
-* Content Architecture
-* Website Maintenance
-* Performance Optimization
-* Local Business Visibility
+1. **Formulario de contacto.** En `contact.html`, el formulario apunta a un placeholder:
+   `action="https://formspree.io/f/REEMPLAZA_ID"`.
+   GitHub Pages es estatico y no procesa formularios, asi que necesitas un backend.
+   - Crea una cuenta gratis en https://formspree.io, agrega un formulario y copia tu ID.
+   - Reemplaza `REEMPLAZA_ID` por ese ID (queda algo como `https://formspree.io/f/abcdwxyz`).
+   - Alternativas: Web3Forms, Getform, o Cloudflare (Workers/Pages Functions) si prefieres no depender de terceros.
+   - El correo `hola@index01.net` ya funciona como respaldo manual (enlace mailto).
 
-## Our Philosophy
+2. **Correo.** Si tu correo no sera `hola@index01.net`, busca y reemplaza esa direccion en todos los archivos (`contact.html`, footers, `llms.txt`, `humans.txt`, JSON-LD).
 
-A beautiful website is not enough.
+3. **Precios de mantenimiento.** En `maintenance.html` las cifras (90, 180) son de referencia. Ajustalas a lo que vas a cobrar de verdad.
 
-Modern websites must be:
+4. **Imagen para redes (Open Graph).** `assets/img/og-image.png` ya esta generada. Si cambias marca o mensaje, regenerala con el mismo tamano (1200x630).
 
-* Fast
-* Mobile-friendly
-* Easy to navigate
-* Search-engine friendly
-* Understandable by AI systems
+## Publicar en GitHub Pages
 
-At Index01, we build websites following current SEO and AEO best practices so businesses can be discovered by both people and intelligent assistants.
+1. Crea un repositorio (por ejemplo `index01-site`) y sube **todo el contenido de esta carpeta** a la raiz del repo (que `index.html` quede en la raiz, no dentro de una subcarpeta).
+2. En el repo: Settings -> Pages -> Source: `Deploy from a branch`, rama `main`, carpeta `/ (root)`.
+3. El archivo `CNAME` ya contiene `index01.net`, asi que GitHub configurara el dominio solo. En tu proveedor de DNS apunta el dominio a GitHub Pages:
+   - Registros A del apex `index01.net` a las IP de GitHub Pages: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
+   - Registro CNAME de `www` a `TU_USUARIO.github.io`.
+4. En Settings -> Pages, activa **Enforce HTTPS** cuando el certificado este listo.
 
-## Why Multiple Pages Instead of Infinite Scroll?
+## Velocidad y independencia de plataforma (opcional pero recomendado)
 
-Many modern websites place all content on a single long page.
+Las tipografias se cargan ahora desde Google Fonts (CDN). Para un sitio mas rapido y que no dependa de terceros, puedes autoalojar las fuentes:
 
-While visually attractive, this often limits discoverability.
+1. Descarga los archivos de Archivo y Martian Mono (woff2).
+2. Ponlos en `assets/fonts/`.
+3. Sustituye el `<link>` de Google Fonts (en el `<head>` de cada pagina) por `@font-face` en `styles.css`.
 
-Index01 favors clear site architecture where each service has its own dedicated page. This allows:
+Esto es coherente con la filosofia del propio sitio: menos dependencias, mas control, mas velocidad.
 
-* Better indexing by search engines
-* Better citation by AI systems
-* Stronger local visibility
-* Clearer user navigation
+## Detalles tecnicos
 
-Every page becomes an entry point.
+- Sin librerias ni build. Se edita y se sube, nada que compilar.
+- Cada pagina lleva su JSON-LD (datos estructurados): `ProfessionalService` y `WebSite` en home, `Service` en servicios, `HowTo` en proceso, `FAQPage` en mantenimiento, `ContactPage` en contacto.
+- `robots.txt` permite explicitamente a los crawlers de IA (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, etc.).
+- `llms.txt` resume el sitio para los asistentes de IA. Mantenlo al dia cuando cambien servicios o paginas.
+- Regla de estilo del proyecto: no se usa la raya larga en el texto. Si editas contenido, manten esa norma.
 
-## Website Maintenance
+## Mantener vivo el sitio
 
-Search systems increasingly favor fresh and updated content.
-
-For that reason, Index01 offers ongoing maintenance plans that help keep websites current and relevant over time.
-
-Services may include:
-
-* Content updates
-* SEO improvements
-* Technical reviews
-* Structured data updates
-* Performance monitoring
-
-## Built By
-
-Ernesto Cisneros Cino
-
-Musician, educator, digital creator, entrepreneur, and founder of multiple web and digital projects.
-
-Public profile:
-
-https://ernestocisneros.art
-
-Ask any modern AI assistant about "Ernesto Cisneros Cino" to verify public digital presence and project history.
-
-## Repository Purpose
-
-This repository contains the source code for the official Index01 website.
-
-It is publicly accessible for transparency, indexing, and educational reference.
-
-## License
-
-Copyright © 2026 Index01.net
-
-All Rights Reserved.
-
-The contents of this repository, including source code, design, text, images, and documentation, are provided for public viewing and indexing purposes only.
-
-No permission is granted to copy, modify, redistribute, reuse, or create derivative works without prior written permission from Index01.
+Cuando edites contenido, actualiza la fecha `lastmod` en `sitemap.xml`. La frescura ayuda a que los buscadores y las IA te sigan citando.

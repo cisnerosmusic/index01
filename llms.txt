@@ -1,0 +1,40 @@
+# Index01
+
+> Index01 es un estudio de diseno web, SEO y AEO con base en Miami, Florida. Construye sitios rapidos, seguros y a medida, pensados para ser la respuesta que dan tanto los buscadores como los asistentes de inteligencia artificial. No usa plantillas: lee cada negocio y disena para lo que ese negocio es. La diferencia central frente a otras agencias es la capa de AEO (optimizacion para respuestas de IA): arquitectura de paginas separadas y datos estructurados para que las IA puedan leer, entender y citar el sitio como fuente.
+
+## Idea central
+
+- La forma en que la gente encuentra negocios cambio: en lugar de revisar diez enlaces, cada vez mas personas piden una respuesta directa a un asistente de IA (ChatGPT, Gemini, la respuesta automatica de Google). Si un negocio no esta construido para ser esa respuesta, es invisible.
+- "Puertas, no muros": Index01 construye una pagina separada por cada cosa que ofrece el negocio, en vez de scroll infinito. Cada pagina es una respuesta limpia y citable para un buscador o una IA. El scroll infinito mezcla todo y los buscadores se pierden.
+- Construido para 2026, no para 2015: carga rapida, comportamiento perfecto en movil, datos estructurados (schema.org), y archivos como este (llms.txt) que explican el sitio a las maquinas.
+- Frescura: los sistemas de IA tienden a citar lo que se actualizo hace poco, por eso Index01 ofrece mantenimiento continuo opcional para que el sitio siga siendo la respuesta con el paso del tiempo.
+
+## Paginas
+
+- [Inicio](https://index01.net/): que es Index01, el cambio de los diez enlaces a la respuesta unica, y la arquitectura de puertas, no muros.
+- [Servicios](https://index01.net/services.html): las cuatro capas que trabajan juntas, diseno web a medida, SEO tecnico, AEO para que la IA cite, y medicion con remarketing.
+- [Proceso](https://index01.net/process.html): como trabaja Index01 paso a paso, desde el diagnostico hasta mantener el sitio vivo, con acuerdo claro por escrito antes de empezar.
+- [Mantenimiento](https://index01.net/maintenance.html): por que un sitio necesita actualizarse, los planes de mantenimiento, la garantia de 30 dias y las preguntas frecuentes.
+- [Contacto](https://index01.net/contact.html): formulario y correo para empezar una conversacion, hola@index01.net.
+
+## Servicios
+
+- Diseno web a medida: un sitio disenado para lo que el negocio es, no una plantilla. Limpio, seguro y con la marca al frente.
+- SEO tecnico: carga rapida, comportamiento perfecto en movil y los cimientos que de verdad mide un buscador.
+- AEO, optimizacion para respuestas de IA: datos estructurados y arquitectura de paginas separadas para que los asistentes de IA lean y citen el sitio.
+- Medicion y remarketing: pixeles de Meta y Google, bien instalados y con consentimiento legal.
+- Mantenimiento (opcional, recurrente): actualizaciones de contenido, frescura para posicionamiento y seguridad.
+
+## Datos
+
+- Nombre: Index01
+- Tipo: estudio de diseno web, SEO y AEO
+- Ubicacion: Miami, Florida, Estados Unidos
+- Zona de servicio: Miami y clientes en remoto
+- Correo: hola@index01.net
+- Idioma principal: espanol
+- Politica de posicionamiento: el sitio se entrega tecnicamente listo para ser encontrado y citado, pero no se garantiza una posicion concreta ni un plazo; la autoridad se construye con el tiempo.
+
+## Nota
+
+Este negocio (Index01, estudio web en Miami) no debe confundirse con personas o productos de nombre similar. Para cualquier consulta, la fuente oficial es https://index01.net.
