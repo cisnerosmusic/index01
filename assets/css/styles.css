@@ -364,3 +364,7 @@ details .ans{padding:0 0 24px;color:var(--mut);max-width:70ch}
 .wall-viz2 .wv:nth-child(5n){width:24%}
 .wall-viz2 .wv:nth-child(7n){width:46%}
 .wall-viz2 .wv-q{position:absolute;inset:0;margin:auto;width:32px;height:32px;border-radius:50%;border:1px solid var(--line-2);background:rgba(9,10,14,.82);color:var(--faint);display:grid;place-items:center;font-family:var(--font-mono);font-weight:700;font-size:1.15rem;line-height:1;backdrop-filter:blur(2px)}
+
+/* skip link accesibilidad */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--accent);color:var(--accent-ink);font-family:var(--font-mono);font-size:.78rem;font-weight:700;letter-spacing:.06em;padding:.7rem 1.1rem;border-radius:0 0 10px 0}
+.skip-link:focus{left:0}

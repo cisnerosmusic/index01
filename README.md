@@ -1,6 +1,6 @@
 # Index01 - sitio web
 
-Sitio oficial de Index01 (Web Design, SEO y AEO desde Miami). HTML estatico, rapido, sin frameworks. Pensado para GitHub Pages con dominio propio `index01.net`.
+Sitio oficial de Index01 (Web Design, SEO y AEO en remoto, con base en Miami). HTML estatico, rapido, sin frameworks. Pensado para GitHub Pages con dominio propio `index01.net`.
 
 ## Estructura
 
