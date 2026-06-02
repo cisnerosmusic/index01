@@ -371,5 +371,5 @@ details .ans{padding:0 0 24px;color:var(--mut);max-width:70ch}
 
 /* power-off del CTA del nav al pulsarlo */
 .nav-cta .btn .arrow{transition:opacity .18s var(--ease),transform .2s var(--ease)}
-.btn--poweroff{pointer-events:none;color:transparent!important;background:transparent!important;box-shadow:none!important;opacity:0;transform:scale(.96);transition:color .18s var(--ease),opacity .7s var(--ease) .18s,background .7s var(--ease) .18s,box-shadow .7s var(--ease) .18s,transform .7s var(--ease) .18s!important}
+.btn--poweroff{pointer-events:none;color:transparent!important;background:transparent!important;border-color:transparent!important;outline:none!important;box-shadow:none!important;opacity:0;transform:scale(.96);transition:color .18s var(--ease),opacity .7s var(--ease) .18s,background .7s var(--ease) .18s,box-shadow .7s var(--ease) .18s,transform .7s var(--ease) .18s!important}
 .btn--poweroff .arrow{opacity:0}
