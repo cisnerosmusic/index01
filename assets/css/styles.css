@@ -368,3 +368,8 @@ details .ans{padding:0 0 24px;color:var(--mut);max-width:70ch}
 /* skip link accesibilidad */
 .skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--accent);color:var(--accent-ink);font-family:var(--font-mono);font-size:.78rem;font-weight:700;letter-spacing:.06em;padding:.7rem 1.1rem;border-radius:0 0 10px 0}
 .skip-link:focus{left:0}
+
+/* power-off del CTA del nav al pulsarlo */
+.nav-cta .btn .arrow{transition:opacity .18s var(--ease),transform .2s var(--ease)}
+.btn--poweroff{pointer-events:none;color:transparent!important;background:transparent!important;box-shadow:none!important;opacity:0;transform:scale(.96);transition:color .18s var(--ease),opacity .7s var(--ease) .18s,background .7s var(--ease) .18s,box-shadow .7s var(--ease) .18s,transform .7s var(--ease) .18s!important}
+.btn--poweroff .arrow{opacity:0}

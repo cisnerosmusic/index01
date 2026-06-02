@@ -37,4 +37,23 @@
   } else {
     els.forEach(function (el) { el.classList.add("in"); });
   }
+
+  // power-off del CTA del nav: desvanece la palabra, luego apaga el boton, luego navega
+  var navCta = document.querySelector(".nav-cta .btn");
+  if (navCta) {
+    navCta.addEventListener("click", function (e) {
+      if (e.defaultPrevented) return;
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var href = navCta.getAttribute("href");
+      if (!href) return;
+      if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      e.preventDefault();
+      navCta.classList.add("btn--poweroff");
+      navCta.setAttribute("aria-disabled", "true");
+      var navigated = false;
+      var go = function () { if (!navigated) { navigated = true; window.location.href = href; } };
+      navCta.addEventListener("transitionend", function (ev) { if (ev.propertyName === "opacity") go(); });
+      setTimeout(go, 1000);
+    });
+  }
 })();
