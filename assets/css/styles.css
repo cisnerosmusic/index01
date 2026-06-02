@@ -336,3 +336,31 @@ details .ans{padding:0 0 24px;color:var(--mut);max-width:70ch}
 .nav-lang a{font-family:var(--font-mono);font-size:.68rem;font-weight:700;letter-spacing:.12em;color:var(--mut);border:1px solid var(--line-2);padding:.42rem .62rem;border-radius:8px;transition:color .2s var(--ease),border-color .2s var(--ease)}
 .nav-lang a:hover{color:var(--accent);border-color:var(--accent)}
 @media(max-width:900px){.nav-lang{margin:14px 0 0}.nav-lang a{display:block;text-align:center}}
+
+/* ---------- graficos puertas vs muros (rediseno) ---------- */
+.viz-cap{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;margin:14px 0 0}
+.doorbox.good .viz-cap{color:var(--accent)}
+.doorbox.bad .viz-cap{color:var(--faint)}
+
+/* PUERTAS: cuatro mini-paginas, una citada */
+.doors-viz{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px}
+.dv-page{position:relative;border:1px solid var(--line-2);border-radius:9px;background:#0b0d12;padding:10px 8px;min-height:78px;display:flex;flex-direction:column;gap:6px}
+.dv-page .dv-h{height:7px;width:72%;border-radius:3px;background:var(--line-2)}
+.dv-page .dv-l{height:4px;width:100%;border-radius:2px;background:rgba(255,255,255,.06)}
+.dv-page .dv-l.short{width:60%}
+.dv-page.is-cited{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 12px 32px -12px rgba(203,251,69,.55);background:linear-gradient(180deg,rgba(203,251,69,.09),#0b0d12)}
+.dv-page.is-cited .dv-h{background:var(--accent)}
+.dv-page.is-cited .dv-l{background:rgba(203,251,69,.18)}
+.dv-badge{position:absolute;top:-10px;right:-8px;width:23px;height:23px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;box-shadow:0 5px 16px -4px rgba(203,251,69,.75)}
+.dv-badge svg{width:13px;height:13px}
+
+/* MUROS: un bloque de fragmentos revueltos, sin nada citable */
+.wall-viz2{position:relative;margin-top:20px;border:1px solid var(--line-2);border-radius:9px;background:#0b0d12;padding:13px;min-height:78px;display:flex;flex-wrap:wrap;gap:6px 7px;align-content:flex-start;overflow:hidden}
+.wall-viz2 .wv{height:5px;border-radius:2px;background:rgba(255,255,255,.055)}
+.wall-viz2 .wv:nth-child(odd){width:40%}
+.wall-viz2 .wv:nth-child(even){width:52%}
+.wall-viz2 .wv:nth-child(3n){width:30%}
+.wall-viz2 .wv:nth-child(4n){width:60%}
+.wall-viz2 .wv:nth-child(5n){width:24%}
+.wall-viz2 .wv:nth-child(7n){width:46%}
+.wall-viz2 .wv-q{position:absolute;inset:0;margin:auto;width:32px;height:32px;border-radius:50%;border:1px solid var(--line-2);background:rgba(9,10,14,.82);color:var(--faint);display:grid;place-items:center;font-family:var(--font-mono);font-weight:700;font-size:1.15rem;line-height:1;backdrop-filter:blur(2px)}
