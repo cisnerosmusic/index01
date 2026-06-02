@@ -2,7 +2,7 @@
 
   Estudio: Index01
   Rol: Diseno web, SEO y AEO
-  Contacto: hola@index01.net
+  Contacto: ernestocisnerosmusic@gmail.com
   Ubicacion: Miami, Florida, EE. UU.
 
 /* SITIO */

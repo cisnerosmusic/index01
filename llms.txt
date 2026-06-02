@@ -15,7 +15,7 @@
 - [Servicios](https://index01.net/services.html): las cuatro capas que trabajan juntas, diseno web a medida, SEO tecnico, AEO para que la IA cite, y medicion con remarketing.
 - [Proceso](https://index01.net/process.html): como trabaja Index01 paso a paso, desde el diagnostico hasta mantener el sitio vivo, con acuerdo claro por escrito antes de empezar.
 - [Mantenimiento](https://index01.net/maintenance.html): por que un sitio necesita actualizarse, los planes de mantenimiento, la garantia de 30 dias y las preguntas frecuentes.
-- [Contacto](https://index01.net/contact.html): formulario y correo para empezar una conversacion, hola@index01.net.
+- [Contacto](https://index01.net/contact.html): formulario y correo para empezar una conversacion, ernestocisnerosmusic@gmail.com.
 
 ## Servicios
 
@@ -31,7 +31,7 @@
 - Tipo: estudio de diseno web, SEO y AEO
 - Ubicacion: Miami, Florida, Estados Unidos
 - Zona de servicio: Miami y clientes en remoto
-- Correo: hola@index01.net
+- Correo: ernestocisnerosmusic@gmail.com
 - Idioma principal: espanol (sitio disponible tambien en ingles bajo /en/)
 - Politica de posicionamiento: el sitio se entrega tecnicamente listo para ser encontrado y citado, pero no se garantiza una posicion concreta ni un plazo; la autoridad se construye con el tiempo.
 
