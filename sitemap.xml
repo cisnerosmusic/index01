@@ -1,33 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://index01.net/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/"/>
     <lastmod>2026-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://index01.net/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/services.html"/>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://index01.net/process.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/process.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/process.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/process.html"/>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://index01.net/maintenance.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/maintenance.html"/>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://index01.net/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/contact.html"/>
     <lastmod>2026-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://index01.net/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://index01.net/en/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/services.html"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://index01.net/en/process.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/process.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/process.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/process.html"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://index01.net/en/maintenance.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/maintenance.html"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://index01.net/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/contact.html"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
   </url>
 </urlset>

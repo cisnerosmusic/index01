@@ -32,8 +32,18 @@
 - Ubicacion: Miami, Florida, Estados Unidos
 - Zona de servicio: Miami y clientes en remoto
 - Correo: hola@index01.net
-- Idioma principal: espanol
+- Idioma principal: espanol (sitio disponible tambien en ingles bajo /en/)
 - Politica de posicionamiento: el sitio se entrega tecnicamente listo para ser encontrado y citado, pero no se garantiza una posicion concreta ni un plazo; la autoridad se construye con el tiempo.
+
+## English
+
+Index01 is a web design, SEO, and AEO studio based in Miami, Florida. It builds fast, secure, custom websites designed to be the answer that both search engines and AI assistants give. The core difference versus other agencies is the AEO layer (Answer Engine Optimization): a separate-page architecture and structured data so AIs can read, understand, and cite the site as a source. English pages:
+
+- [Home](https://index01.net/en/)
+- [Services](https://index01.net/en/services.html)
+- [Process](https://index01.net/en/process.html)
+- [Maintenance](https://index01.net/en/maintenance.html)
+- [Contact](https://index01.net/en/contact.html)
 
 ## Nota
 

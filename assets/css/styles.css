@@ -1,4 +1,24 @@
 /* =========================================================
+   Fuentes auto-alojadas (subconjunto Latin, woff2 variable)
+   Elimina la dependencia de fonts.googleapis.com (render-blocking).
+   ========================================================= */
+@font-face{
+  font-family:"Archivo";
+  src:url("/assets/fonts/archivo-var.woff2") format("woff2");
+  font-weight:400 800;
+  font-stretch:100% 125%;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Martian Mono";
+  src:url("/assets/fonts/martianmono-var.woff2") format("woff2");
+  font-weight:400 700;
+  font-style:normal;
+  font-display:swap;
+}
+
+/* =========================================================
    Index01 - sistema de diseno
    Web Design / SEO / AEO / Miami
    Estetica: near-black tecnico, tinta lime de "resaltado",
@@ -310,3 +330,9 @@ details .ans{padding:0 0 24px;color:var(--mut);max-width:70ch}
   .reveal{opacity:1;transform:none}
 }
 ::selection{background:var(--accent);color:var(--accent-ink)}
+
+/* selector de idioma */
+.nav-lang{display:flex;align-items:center;margin-left:.5rem}
+.nav-lang a{font-family:var(--font-mono);font-size:.68rem;font-weight:700;letter-spacing:.12em;color:var(--mut);border:1px solid var(--line-2);padding:.42rem .62rem;border-radius:8px;transition:color .2s var(--ease),border-color .2s var(--ease)}
+.nav-lang a:hover{color:var(--accent);border-color:var(--accent)}
+@media(max-width:900px){.nav-lang{margin:14px 0 0}.nav-lang a{display:block;text-align:center}}
