@@ -33,9 +33,9 @@ index01/
    - Crea una cuenta gratis en https://formspree.io, agrega un formulario y copia tu ID.
    - Reemplaza `REEMPLAZA_ID` por ese ID (queda algo como `https://formspree.io/f/abcdwxyz`).
    - Alternativas: Web3Forms, Getform, o Cloudflare (Workers/Pages Functions) si prefieres no depender de terceros.
-   - El correo `ernestocisnerosmusic@gmail.com` ya funciona como respaldo manual (enlace mailto).
+   - El correo `support@index01.net` ya funciona como respaldo manual (enlace mailto).
 
-2. **Correo.** Si tu correo no sera `ernestocisnerosmusic@gmail.com`, busca y reemplaza esa direccion en todos los archivos (`contact.html`, footers, `llms.txt`, `humans.txt`, JSON-LD).
+2. **Correo.** Si tu correo no sera `support@index01.net`, busca y reemplaza esa direccion en todos los archivos (`contact.html`, footers, `llms.txt`, `humans.txt`, JSON-LD).
 
 3. **Precios de mantenimiento.** En `maintenance.html` las cifras (90, 180) son de referencia. Ajustalas a lo que vas a cobrar de verdad.
 
