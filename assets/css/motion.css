@@ -1,0 +1,56 @@
+/* ============================================================
+   Index01 - capa de movimiento (motion.css)
+   Separable y reversible: TODO vive bajo [data-motion].
+   Quita data-motion de <html> (o este <link>) y el sitio
+   queda exactamente como sin esta capa: legible y funcional.
+   Solo anima transform y opacity. prefers-reduced-motion:
+   motion.js no se inicia y styles.css ya neutraliza transiciones.
+   Reutiliza los tokens del sistema (--ease, --accent, --bg).
+   ============================================================ */
+
+:root{
+  --ease-emph:cubic-bezier(.16,1,.3,1); /* ease-out enfatizado, sin rebote */
+  --dur-micro:200ms;                    /* hover, focus, press */
+  --dur-base:320ms;                     /* estados */
+  --dur-reveal:700ms;                   /* revelados (se mantiene en 700ms por decision de diseno) */
+  --stagger:70ms;                       /* escalonado entre hermanos */
+}
+
+/* ---- Revelados ----
+   El estado base .reveal (opacity:0 -> .in) vive en styles.css.
+   Aqui solo aplicamos easing enfatizado + retardo escalonado por --i. */
+[data-motion] .reveal{
+  transition:opacity var(--dur-reveal) var(--ease-emph),
+             transform var(--dur-reveal) var(--ease-emph);
+  transition-delay:calc(var(--i, 0) * var(--stagger));
+}
+
+/* ---- Feedback de "press" al pulsar botones ---- */
+[data-motion] .btn:active{transform:scale(.96)}
+
+/* ---- Subrayado que crece en los enlaces del nav (orientacion) ----
+   Solo en escritorio; excluye el boton CTA. */
+@media(min-width:901px){
+  [data-motion] .nav-links a:not(.btn){position:relative}
+  [data-motion] .nav-links a:not(.btn)::after{
+    content:"";position:absolute;left:.85rem;right:.85rem;bottom:.42rem;height:2px;
+    background:var(--accent);transform:scaleX(0);transform-origin:left;
+    transition:transform var(--dur-micro) var(--ease);
+  }
+  [data-motion] .nav-links a:not(.btn):hover::after,
+  [data-motion] .nav-links a:not(.btn)[aria-current="page"]::after{transform:scaleX(1)}
+}
+
+/* ---- El nav se "asienta" al hacer scroll (sin reflow: transform + opacity) ---- */
+[data-motion] .nav .brand{transition:transform var(--dur-base) var(--ease)}
+[data-motion] .nav--scrolled .brand{transform:scale(.92)}
+[data-motion] .nav::after{
+  content:"";position:absolute;inset:0;z-index:-1;background:var(--bg);
+  opacity:0;transition:opacity var(--dur-base) var(--ease);pointer-events:none;
+}
+[data-motion] .nav--scrolled::after{opacity:.45}
+
+/* ---- Seguro extra: si el usuario pide menos movimiento, sin transiciones ---- */
+@media(prefers-reduced-motion:reduce){
+  [data-motion] .reveal{opacity:1;transform:none;transition:none}
+}

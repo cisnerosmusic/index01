@@ -21,9 +21,30 @@ index01/
   .nojekyll               evita el procesado Jekyll de GitHub Pages
   assets/
     css/styles.css        sistema de diseno completo
+    css/motion.css        capa de movimiento (separable, ver abajo)
     js/main.js            menu movil, ano automatico, animacion al hacer scroll
+    js/scramble.js        efecto Solari en logo y footer
+    js/motion.js          capa de movimiento (separable, ver abajo)
     img/                  favicon (svg + png), apple-touch, icon-512, og-image
 ```
+
+## Capa de movimiento (motion.css + motion.js)
+
+Capa anadida y reversible que da retroalimentacion y guia la atencion
+(revelados al entrar en viewport con escalonado, "press" en botones,
+subrayado en el nav, conteo de cifras del hero, nav que se asienta al
+hacer scroll). Solo anima `transform` y `opacity` (60fps, sin reflow) y
+respeta `prefers-reduced-motion`.
+
+- Vive en `assets/css/motion.css` y `assets/js/motion.js`, separados del
+  sistema base. No modifican `styles.css` ni `main.js`.
+- **Interruptor de una linea:** todo se activa con el atributo
+  `data-motion` en la etiqueta `<html>` de cada pagina. Las reglas de
+  `motion.css` viven bajo `[data-motion]` y `motion.js` no hace nada sin
+  ese atributo. Quita `data-motion` (o los dos `<link>`/`<script>`) y el
+  sitio queda exactamente como sin la capa, legible y funcional.
+- Los revelados de las paginas interiores se etiquetan por JS, no en el
+  HTML: si la capa no corre, ningun contenido queda oculto.
 
 ## Antes de publicar: cosas que debes cambiar
 
