@@ -200,6 +200,7 @@ section{position:relative;padding-block:clamp(64px,9vw,128px)}
 .card h3{margin:.9rem 0 .6rem}
 .card p{color:var(--mut);font-size:.98rem;margin:0}
 .card .tag{display:inline-block;margin-top:1.1rem;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line-2);padding:.3rem .6rem;border-radius:6px}
+.card .tag.tag-accent{color:var(--accent);border-color:rgba(203,251,69,.45);background:rgba(203,251,69,.06)}
 
 /* tarjeta destacada */
 .card.feature{background:linear-gradient(180deg,rgba(203,251,69,.06),var(--bg-2));border-color:rgba(203,251,69,.25)}
