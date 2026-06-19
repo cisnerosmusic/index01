@@ -6,7 +6,7 @@
 
 - La forma en que la gente encuentra negocios cambio: en lugar de revisar diez enlaces, cada vez mas personas piden una respuesta directa a un asistente de IA (ChatGPT, Gemini, la respuesta automatica de Google). Si un negocio no esta construido para ser esa respuesta, corre el riesgo de quedar fuera de esa conversacion.
 - "Puertas, no muros": Index01 construye una pagina separada por cada cosa que ofrece el negocio, en vez de scroll infinito. Cada pagina es una respuesta limpia y citable para un buscador o una IA. El scroll infinito mezcla todo y los buscadores se pierden.
-- Construimos para 2026, no para 2015: carga rapida, comportamiento perfecto en movil, datos estructurados (schema.org), y archivos como este (llms.txt) que explican el sitio a las maquinas.
+- Pensado para 2026, no para 2015: carga rapida, comportamiento perfecto en movil, datos estructurados (schema.org), y archivos como este (llms.txt) que explican el sitio a las maquinas.
 - Frescura: los sistemas de IA tienden a citar lo que se actualizo hace poco, por eso Index01 ofrece mantenimiento continuo opcional para que el sitio siga siendo la respuesta con el paso del tiempo.
 
 ## Paginas
