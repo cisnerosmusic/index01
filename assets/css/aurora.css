@@ -28,6 +28,5 @@
 @keyframes ctaGlowIn{to{opacity:.85}}
 @keyframes ctaOrbit{to{--cta-a:360deg}}
 
-/* El glow lima de fondo del hero (.hero::after) se disuelve cuando arranca el bloom */
-.hero[data-aurora-host]::after{transition:opacity 3.2s ease}
-.hero[data-aurora-host].aurora-bloomed::after{opacity:0}
+/* El glow lima del hero (.hero::after) se disuelve en cross-fade lento con la aurora */
+.hero[data-aurora-host]::after{opacity:var(--halo,1)}
