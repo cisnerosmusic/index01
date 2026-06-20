@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-motion>
+<html lang="es" data-motion data-aurora>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,6 +31,7 @@
 <link rel="preload" href="/assets/fonts/martianmono-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/styles.css">
 <link rel="stylesheet" href="/assets/css/motion.css">
+<link rel="stylesheet" href="/assets/css/aurora.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -83,7 +84,7 @@
 
 <main id="main">
 
-<section class="hero" style="padding-block:clamp(60px,9vw,110px)">
+<section class="hero" style="padding-block:clamp(60px,9vw,110px)" data-aurora-host data-trigger="load" data-l="2,6" data-r="4,9">
   <div class="wrap">
     <span class="eyebrow"><span class="idx">[ contacto ]</span> Hablemos</span>
     <h1>Cuéntanos qué haces. <span class="lime">Te decimos cómo te construimos.</span></h1>
@@ -192,5 +193,6 @@
 
 <script src="/assets/js/main.js" defer></script>
 <script src="/assets/js/motion.js" defer></script>
+<script src="/assets/js/aurora.js" defer></script>
 </body>
 </html>

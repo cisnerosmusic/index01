@@ -1,0 +1,29 @@
+/* Aurora - capa aditiva y reversible. Bajo [data-aurora] + presencia real del canvas. */
+[data-aurora-host]{position:relative;overflow:hidden}
+[data-aurora-host] > canvas.aurora{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0;border-radius:inherit}
+[data-aurora-host] > .aurora-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;border-radius:inherit}
+.hero[data-aurora-host] > .aurora-scrim{background:linear-gradient(100deg,rgba(2,7,5,.78) 0%,rgba(2,7,5,.44) 32%,rgba(2,7,5,0) 64%)}
+.cta-band[data-aurora-host] > .aurora-scrim{background:radial-gradient(95% 95% at 50% 50%,rgba(2,7,5,.52) 0%,rgba(2,7,5,.30) 100%)}
+[data-aurora-on] .hero .wrap{position:relative;z-index:2}
+[data-aurora-on] .cta-band[data-aurora-host] > .eyebrow,
+[data-aurora-on] .cta-band[data-aurora-host] > h2,
+[data-aurora-on] .cta-band[data-aurora-host] > p,
+[data-aurora-on] .cta-band[data-aurora-host] > a{position:relative;z-index:2}
+[data-aurora-on] .hero h1,[data-aurora-on] .hero .lede,[data-aurora-on] .hero .eyebrow,
+[data-aurora-on] .hero-meta .k,[data-aurora-on] .hero-meta .v,
+[data-aurora-on] .cta-band h2,[data-aurora-on] .cta-band p,[data-aurora-on] .cta-band .eyebrow{text-shadow:0 2px 8px rgba(0,0,0,.55)}
+
+/* Borde con luz orbitando: va en un envoltorio EXTERNO (.cta-glow) para no
+   recortarse, mientras el aurora se recorta dentro del recuadro (esquinas redondas). */
+@property --cta-a{ syntax:'<angle>'; initial-value:0deg; inherits:false; }
+.cta-glow{position:relative}
+.cta-glow::before{
+  content:"";position:absolute;inset:-3px;border-radius:calc(var(--radius-lg) + 3px);z-index:-1;pointer-events:none;
+  background:conic-gradient(from var(--cta-a),
+    rgba(203,251,69,0) 0deg, rgba(203,251,69,0) 32deg,
+    rgba(203,251,69,.90) 78deg, rgba(203,251,69,0) 126deg, rgba(203,251,69,0) 360deg);
+  filter:blur(14px);opacity:0;
+}
+.cta-glow.lit::before{animation:ctaGlowIn 1.6s ease forwards, ctaOrbit 14s linear infinite}
+@keyframes ctaGlowIn{to{opacity:.85}}
+@keyframes ctaOrbit{to{--cta-a:360deg}}

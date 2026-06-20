@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-motion>
+<html lang="es" data-motion data-aurora>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +39,7 @@
 
 <link rel="stylesheet" href="/assets/css/styles.css">
 <link rel="stylesheet" href="/assets/css/motion.css">
+<link rel="stylesheet" href="/assets/css/aurora.css">
 
 <script type="application/ld+json">
 {
@@ -103,8 +104,7 @@
 
 <main id="main">
 
-<section class="hero">
-  <div class="scanline" aria-hidden="true"></div>
+<section class="hero" data-aurora-host data-trigger="load" data-l="4,9" data-r="7,14">
   <div class="wrap">
     <span class="eyebrow"><span class="idx">[01]</span> Web Design &middot; SEO &middot; AEO &middot; En remoto</span>
     <h1>Construimos para ser <span class="lime">la respuesta</span>, no el décimo enlace.</h1>
@@ -218,7 +218,7 @@
 
 <section>
   <div class="wrap">
-    <div class="cta-band reveal">
+    <div class="cta-band reveal" data-aurora-host data-trigger="view" data-l="0.8,5" data-r="2.5,8.5">
       <span class="eyebrow" style="justify-content:center"><span class="idx">[06]</span> Empezar</span>
       <h2 style="margin-top:1rem">Una ventaja que casi nadie aprovecha todavía.</h2>
       <p>Diseño a medida, posicionamiento con las mejores prácticas de 2026 y medición. Cuéntanos qué haces y te decimos cómo te construimos para que te encuentren.</p>
@@ -263,6 +263,7 @@
 
 <script src="/assets/js/main.js" defer></script>
 <script src="/assets/js/motion.js" defer></script>
+<script src="/assets/js/aurora.js" defer></script>
 <script src="/assets/js/scramble.js" defer></script>
 </body>
 </html>
