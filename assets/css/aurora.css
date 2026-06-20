@@ -27,3 +27,7 @@
 .cta-glow.lit::before{animation:ctaGlowIn 1.6s ease forwards, ctaOrbit 14s linear infinite}
 @keyframes ctaGlowIn{to{opacity:.85}}
 @keyframes ctaOrbit{to{--cta-a:360deg}}
+
+/* El glow lima de fondo del hero (.hero::after) se disuelve cuando arranca el bloom */
+.hero[data-aurora-host]::after{transition:opacity 3.2s ease}
+.hero[data-aurora-host].aurora-bloomed::after{opacity:0}

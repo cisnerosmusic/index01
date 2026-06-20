@@ -108,13 +108,14 @@
       }, { threshold: 0.25 }).observe(host);
     } else { visible = true; if (t0 === null) t0 = performance.now(); }
 
-    var last = performance.now(), carry = 0, MINDT = 1 / 30;
+    var last = performance.now(), carry = 0, MINDT = 1 / 30, bloomed = false;
     function loop(now) {
       requestAnimationFrame(loop);
       if (!visible || document.hidden || t0 === null) return;
       var dt = Math.min((now - last) / 1000, 0.05); last = now; carry += dt;
       if (carry < MINDT) return; carry = 0;
       var el = (now - t0) / 1000;
+      if (!bloomed && el >= L[0]) { bloomed = true; host.classList.add("aurora-bloomed"); }
       gl.uniform1f(uTime, el);
       gl.uniform1f(uL, smooth(L[0], L[1], el));
       gl.uniform1f(uR, smooth(R[0], R[1], el));
