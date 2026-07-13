@@ -46,17 +46,25 @@ respeta `prefers-reduced-motion`.
 - Los revelados de las paginas interiores se etiquetan por JS, no en el
   HTML: si la capa no corre, ningun contenido queda oculto.
 
-## Antes de publicar: cosas que debes cambiar
+## Configuracion del sitio (estado actual)
 
-1. **Formulario de contacto.** En `contact.html`, el formulario apunta a un placeholder:
-   `action="https://formspree.io/f/REEMPLAZA_ID"`.
-   GitHub Pages es estatico y no procesa formularios, asi que necesitas un backend.
-   - Crea una cuenta gratis en https://formspree.io, agrega un formulario y copia tu ID.
-   - Reemplaza `REEMPLAZA_ID` por ese ID (queda algo como `https://formspree.io/f/abcdwxyz`).
-   - Alternativas: Web3Forms, Getform, o Cloudflare (Workers/Pages Functions) si prefieres no depender de terceros.
-   - El correo `support@index01.net` ya funciona como respaldo manual (enlace mailto).
+El sitio ya esta publicado en index01.net. Esta seccion documenta como esta montado y que
+puedes ajustar.
 
-2. **Correo.** Si tu correo no sera `support@index01.net`, busca y reemplaza esa direccion en todos los archivos (`contact.html`, footers, `llms.txt`, `humans.txt`, JSON-LD).
+1. **Formulario de contacto (configurado y en vivo).** En `contact.html` y `en/contact.html`
+   el formulario usa **FormSubmit.co** (backend gratuito para sitios estaticos). No hay ningun
+   placeholder que reemplazar.
+   - Los envios llegan a **ernestocisnerosmusic@gmail.com** (destinatario del `action`) y, por
+     copia, a **support@index01.net** (campo oculto `_cc`). Ambas direcciones reciben cada mensaje.
+   - Redirige a la pagina de gracias (`_next`), sin captcha (`_captcha=false`) y con honeypot
+     antispam (`_honey`).
+   - Para cambiar destinatarios: edita el `action` (principal) y/o el campo `_cc` (copias). Nota:
+     FormSubmit envia un correo de **activacion** la primera vez que se usa una direccion nueva;
+     hay que confirmarlo en esa bandeja para que empiece a entregar.
+
+2. **Correo publico.** La direccion visible del sitio es `support@index01.net` (footers, mailto,
+   `llms.txt`, `humans.txt`, JSON-LD), puesta de forma consistente. El formulario, ademas, entrega
+   a esa direccion y a la personal (ver punto 1).
 
 3. **Precios de mantenimiento.** En `maintenance.html` las cifras (90, 180) son de referencia. Ajustalas a lo que vas a cobrar de verdad.
 
