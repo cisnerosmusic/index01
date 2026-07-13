@@ -1,102 +1,79 @@
-# Index01 - sitio web
+# index01.net
 
-Sitio oficial de Index01 (Web Design, SEO y AEO en remoto, con base en Miami). HTML estatico, rapido, sin frameworks. Pensado para GitHub Pages con dominio propio `index01.net`.
+Sitio oficial de **Index01** (Web Design, SEO y AEO en remoto, con base en Miami).
+HTML estatico, rapido, sin frameworks ni paso de build. Bilingue (espanol e ingles).
+Desplegado en GitHub Pages con dominio propio, `index01.net`.
 
 ## Estructura
 
 ```
 index01/
-  index.html              HOME
-  services.html           SERVICES
-  process.html            PROCESS
-  maintenance.html        MAINTENANCE
-  contact.html            CONTACT
-  sitemap.xml             mapa del sitio (5 URLs)
-  robots.txt              permite todos los crawlers, incluidos los de IA
-  llms.txt                resumen del sitio para asistentes de IA (clave para AEO)
-  humans.txt              creditos
-  site.webmanifest        PWA / iconos
-  favicon.ico             favicon multi-tamano
-  CNAME                   dominio: index01.net
-  .nojekyll               evita el procesado Jekyll de GitHub Pages
+  index.html  services.html  process.html  maintenance.html  contact.html   Paginas (ES)
+  legal.html  gracias.html  404.html                                         Legal, gracias, 404
+  en/                     Mirror en ingles (index, services, process, maintenance, contact, legal, thanks)
   assets/
-    css/styles.css        sistema de diseno completo
-    css/motion.css        capa de movimiento (separable, ver abajo)
-    js/main.js            menu movil, ano automatico, animacion al hacer scroll
-    js/scramble.js        efecto Solari en logo y footer
-    js/motion.js          capa de movimiento (separable, ver abajo)
-    img/                  favicon (svg + png), apple-touch, icon-512, og-image
+    css/styles.css        Sistema de diseno base
+    css/motion.css        Capa de movimiento (separable, ver abajo)
+    css/aurora.css        Capa "aurora" del hero (separable, ver abajo)
+    js/main.js            Menu movil, ano automatico, revelado al hacer scroll
+    js/scramble.js        Efecto tipo Solari en el logo y el footer
+    js/motion.js          Capa de movimiento (separable)
+    js/aurora.js          Capa aurora (separable)
+    img/                  Favicons, apple-touch, icon-512, og-image (1200x630)
+  sitemap.xml             12 URLs (ES + EN) con hreflang
+  robots.txt              Abre a todos los crawlers, incluidos los de IA
+  llms.txt                Resumen del sitio para asistentes de IA (clave para AEO)
+  humans.txt              Creditos
+  site.webmanifest        PWA / iconos
+  CNAME                   index01.net
+  .nojekyll               Evita el procesado Jekyll de GitHub Pages
 ```
 
-## Capa de movimiento (motion.css + motion.js)
+## Como esta hecho
 
-Capa anadida y reversible que da retroalimentacion y guia la atencion
-(revelados al entrar en viewport con escalonado, "press" en botones,
-subrayado en el nav, conteo de cifras del hero, nav que se asienta al
-hacer scroll). Solo anima `transform` y `opacity` (60fps, sin reflow) y
-respeta `prefers-reduced-motion`.
+- **Sin build.** Se edita el HTML y se sube. Nada que compilar.
+- **Bilingue.** La raiz es el sitio en espanol; `en/` es el mirror en ingles, enlazado con `hreflang`.
+- **SEO / AEO.** Cada pagina lleva su JSON-LD (`ProfessionalService` y `WebSite` en la home,
+  `Service`, `HowTo`, `FAQPage`, `ContactPage`...). `robots.txt` permite a los crawlers de IA
+  (GPTBot, ClaudeBot, PerplexityBot, Google-Extended...) y `llms.txt` resume el sitio para ellos.
+- **Fuentes** desde Google Fonts (Archivo y Martian Mono).
+- **Deploy:** GitHub Pages, rama `main`, dominio `index01.net` via `CNAME`.
 
-- Vive en `assets/css/motion.css` y `assets/js/motion.js`, separados del
-  sistema base. No modifican `styles.css` ni `main.js`.
-- **Interruptor de una linea:** todo se activa con el atributo
-  `data-motion` en la etiqueta `<html>` de cada pagina. Las reglas de
-  `motion.css` viven bajo `[data-motion]` y `motion.js` no hace nada sin
-  ese atributo. Quita `data-motion` (o los dos `<link>`/`<script>`) y el
-  sitio queda exactamente como sin la capa, legible y funcional.
-- Los revelados de las paginas interiores se etiquetan por JS, no en el
-  HTML: si la capa no corre, ningun contenido queda oculto.
+## Capas de efectos (separables y reversibles)
 
-## Configuracion del sitio (estado actual)
+El sitio funciona perfecto sin ninguna capa de animacion. Las capas solo anaden pulido, animan
+solo `transform` y `opacity` (60fps, sin reflow) y respetan `prefers-reduced-motion`.
 
-El sitio ya esta publicado en index01.net. Esta seccion documenta como esta montado y que
-puedes ajustar.
+- **Motion** (`assets/css/motion.css` + `assets/js/motion.js`): revelados escalonados al entrar en
+  viewport, "press" en botones, subrayado del nav, conteo de cifras del hero, nav que se asienta al
+  hacer scroll.
+- **Aurora** (`assets/css/aurora.css` + `assets/js/aurora.js`): el halo animado del hero.
+- **Scramble** (`assets/js/scramble.js`): efecto tipo tablero Solari en el logo y el footer.
 
-1. **Formulario de contacto (configurado y en vivo).** En `contact.html` y `en/contact.html`
-   el formulario usa **FormSubmit.co** (backend gratuito para sitios estaticos). No hay ningun
-   placeholder que reemplazar.
-   - Los envios llegan a **ernestocisnerosmusic@gmail.com** (destinatario del `action`) y, por
-     copia, a **support@index01.net** (campo oculto `_cc`). Ambas direcciones reciben cada mensaje.
-   - Redirige a la pagina de gracias (`_next`), sin captcha (`_captcha=false`) y con honeypot
-     antispam (`_honey`).
-   - Para cambiar destinatarios: edita el `action` (principal) y/o el campo `_cc` (copias). Nota:
-     FormSubmit envia un correo de **activacion** la primera vez que se usa una direccion nueva;
-     hay que confirmarlo en esa bandeja para que empiece a entregar.
+**Interruptor de una linea:** cada capa se activa con un atributo en la etiqueta `<html>`:
+`data-motion` y `data-aurora`. Las reglas CSS viven bajo esos selectores y el JS no hace nada sin el
+atributo. Quita el atributo (o los `<link>`/`<script>`) y el sitio queda igual, legible y funcional.
+Los revelados se etiquetan por JS, no en el HTML, asi que si una capa no corre, ningun contenido
+queda oculto.
 
-2. **Correo publico.** La direccion visible del sitio es `support@index01.net` (footers, mailto,
-   `llms.txt`, `humans.txt`, JSON-LD), puesta de forma consistente. El formulario, ademas, entrega
-   a esa direccion y a la personal (ver punto 1).
+## Formulario de contacto
 
-3. **Precios de mantenimiento.** En `maintenance.html` las cifras (90, 180) son de referencia. Ajustalas a lo que vas a cobrar de verdad.
+El formulario (`contact.html` y `en/contact.html`) esta **en vivo** con **FormSubmit.co**, un backend
+gratuito para sitios estaticos. Cada envio llega a **dos** direcciones:
 
-4. **Imagen para redes (Open Graph).** `assets/img/og-image.png` ya esta generada. Si cambias marca o mensaje, regenerala con el mismo tamano (1200x630).
+- `ernestocisnerosmusic@gmail.com` (destinatario del `action`).
+- `support@index01.net` (copia, campo oculto `_cc`).
 
-## Publicar en GitHub Pages
+Configuracion: redirige a la pagina de gracias (`_next`), sin captcha (`_captcha=false`) y con
+honeypot antispam (`_honey`). Para cambiar destinatarios, edita el `action` (principal) y/o el `_cc`
+(copias). Nota: FormSubmit envia un correo de **activacion** la primera vez que se usa una direccion
+nueva; hay que confirmarlo en esa bandeja para que empiece a entregar.
 
-1. Crea un repositorio (por ejemplo `index01-site`) y sube **todo el contenido de esta carpeta** a la raiz del repo (que `index.html` quede en la raiz, no dentro de una subcarpeta).
-2. En el repo: Settings -> Pages -> Source: `Deploy from a branch`, rama `main`, carpeta `/ (root)`.
-3. El archivo `CNAME` ya contiene `index01.net`, asi que GitHub configurara el dominio solo. En tu proveedor de DNS apunta el dominio a GitHub Pages:
-   - Registros A del apex `index01.net` a las IP de GitHub Pages: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
-   - Registro CNAME de `www` a `TU_USUARIO.github.io`.
-4. En Settings -> Pages, activa **Enforce HTTPS** cuando el certificado este listo.
+Correo publico del sitio: **support@index01.net** (footers, mailto, `llms.txt`, `humans.txt`, JSON-LD).
 
-## Velocidad y independencia de plataforma (opcional pero recomendado)
+## Editar y mantener
 
-Las tipografias se cargan ahora desde Google Fonts (CDN). Para un sitio mas rapido y que no dependa de terceros, puedes autoalojar las fuentes:
-
-1. Descarga los archivos de Archivo y Martian Mono (woff2).
-2. Ponlos en `assets/fonts/`.
-3. Sustituye el `<link>` de Google Fonts (en el `<head>` de cada pagina) por `@font-face` en `styles.css`.
-
-Esto es coherente con la filosofia del propio sitio: menos dependencias, mas control, mas velocidad.
-
-## Detalles tecnicos
-
-- Sin librerias ni build. Se edita y se sube, nada que compilar.
-- Cada pagina lleva su JSON-LD (datos estructurados): `ProfessionalService` y `WebSite` en home, `Service` en servicios, `HowTo` en proceso, `FAQPage` en mantenimiento, `ContactPage` en contacto.
-- `robots.txt` permite explicitamente a los crawlers de IA (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, etc.).
-- `llms.txt` resume el sitio para los asistentes de IA. Mantenlo al dia cuando cambien servicios o paginas.
-- Regla de estilo del proyecto: no se usa la raya larga en el texto. Si editas contenido, manten esa norma.
-
-## Mantener vivo el sitio
-
-Cuando edites contenido, actualiza la fecha `lastmod` en `sitemap.xml`. La frescura ayuda a que los buscadores y las IA te sigan citando.
+- **Bilingue:** si cambias una pagina en la raiz (ES), replica el cambio en su equivalente de `en/`.
+- **Imagen social (Open Graph):** si cambias marca o mensaje, regenera `assets/img/og-image.png` con
+  el mismo tamano, `1200x630`.
+- **llms.txt:** mantenlo al dia cuando cambien servicios o paginas (es lo que leen las IA).
