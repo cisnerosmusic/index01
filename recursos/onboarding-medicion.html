@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Recurso privado: accesible solo por enlace directo. Fuera del sitemap a proposito. -->
+<meta name="robots" content="noindex, nofollow">
+<title>Playbook de Presencia y Medicion Digital | Index01</title>
+<meta name="description" content="Guia interna de onboarding: Meta, Pixel, GA4, Search Console y Clarity, en orden y sin friccion.">
+<style>
+  :root{
+    --bg:#f5f6f8; --surface:#ffffff; --ink:#1b1e22; --muted:#616b76;
+    --accent:#2f4fd6; --accent-soft:#eaeefb; --line:#e4e7ec; --ok:#16a34a;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;padding:40px 20px}
+  .wrap{max-width:860px;margin:0 auto}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:40px 44px;
+    box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  header.doc{margin-bottom:8px}
+  .kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;letter-spacing:-.02em;margin:10px 0 14px;line-height:1.15}
+  .lead{color:var(--muted);font-size:1.02rem;max-width:60ch}
+  .meta{margin-top:14px;font-size:.8rem;color:var(--muted);font-family:var(--mono)}
+  .priv{display:inline-block;margin-top:10px;font-size:.72rem;font-family:var(--mono);color:#8a5a00;background:#fff7e6;
+    border:1px solid #ffe4a3;border-radius:6px;padding:4px 9px}
+  h2{font-size:1.32rem;font-weight:700;letter-spacing:-.01em;margin:44px 0 8px;padding-top:22px;border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none;padding-top:0}
+  h3{font-size:1.02rem;font-weight:700;margin:26px 0 6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  p{margin:10px 0;color:#2a2f36}
+  ul,ol{margin:10px 0 10px 4px;padding-left:22px}
+  li{margin:6px 0}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+  a:hover{border-color:var(--accent)}
+  code{font-family:var(--mono);font-size:.88em;background:#f0f2f5;padding:1px 6px;border-radius:5px}
+  strong{color:var(--ink)}
+  blockquote{margin:16px 0;padding:14px 18px;background:var(--accent-soft);border-left:3px solid var(--accent);
+    border-radius:0 8px 8px 0;color:#26306b;font-size:.98rem}
+  .who{font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+    padding:3px 8px;border-radius:999px;white-space:nowrap}
+  .who-c{background:#e8f5ee;color:#1a7a44;border:1px solid #b7e2c7}
+  .who-i{background:var(--accent-soft);color:#2740b8;border:1px solid #c4cff6}
+  .who-ci{background:#f3eefe;color:#6b3fc0;border:1px solid #ddccf7}
+  .layers{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+  .layer{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:#fbfcfd}
+  .layer h4{font-size:.95rem;margin-bottom:4px}
+  .layer p{font-size:.9rem;margin:4px 0;color:var(--muted)}
+  .check{list-style:none;padding-left:0;margin:14px 0}
+  .check li{display:flex;gap:11px;align-items:flex-start;margin:9px 0}
+  .check input{margin-top:5px;width:17px;height:17px;accent-color:var(--ok);flex:0 0 auto;cursor:pointer}
+  .gotchas li{margin:9px 0}
+  footer.doc{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);
+    font-family:var(--mono)}
+  @media (max-width:600px){.card{padding:26px 22px}.layers{grid-template-columns:1fr}}
+  @media print{body{background:#fff;padding:0}.card{border:none;box-shadow:none;padding:0}.priv{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="card">
+
+  <header class="doc">
+    <span class="kicker">Index01 · Runbook</span>
+    <h1>Playbook de Presencia y Medicion Digital</h1>
+    <p class="lead">Guia de puesta en marcha (onboarding). En orden y sin friccion: Pagina de Facebook,
+      Instagram, Business Manager, Pixel, verificacion de dominio, Google Analytics 4, Search Console y
+      Microsoft Clarity.</p>
+    <div class="meta">Ultima revision: Julio 2026 · Uso interno y de entrega a clientes</div>
+    <span class="priv">Recurso privado · accesible solo por enlace · fuera del sitemap</span>
+  </header>
+
+  <h2>0. La regla de oro (propiedad)</h2>
+  <p>Antes de tocar nada, define <strong>de quien es cada cosa</strong>. Esto evita el 90% de los lios.</p>
+  <ul>
+    <li><strong>Negocio propio</strong> (Index01, ernestocisneros.art): todo bajo <strong>tu</strong> Business Portfolio y tus cuentas.</li>
+    <li><strong>Sucursal / misma propiedad</strong> (ej. Tesla Boutique dentro de UnlimitedWraps): vive en el <strong>portfolio que ya tiene el dueno</strong>, como <strong>Pagina propia y Pixel propio</strong> (activos separados, mismo portfolio). No se comparte el pixel de la marca madre.</li>
+    <li><strong>Cliente tercero</strong>: <strong>el cliente es el dueno de todo</strong>. Tu lo <strong>configuras</strong> y quedas con <strong>acceso de socio/admin</strong>. Nunca crees los activos del cliente bajo tu perfil personal.</li>
+  </ul>
+  <blockquote>Frase para grabar: "Yo lo monto, el cliente lo posee, yo mantengo el acceso."</blockquote>
+
+  <h2>1. Las dos capas (empieza por la gratis)</h2>
+  <div class="layers">
+    <div class="layer"><h4>Triada gratuita</h4><p>Google Analytics 4 + Search Console + Microsoft Clarity. Todo sitio deberia tenerla. Ensena sin gastar.</p></div>
+    <div class="layer"><h4>Capa de publicidad</h4><p>Meta Pixel (+ anuncios). Se apoya en la triada. Monta primero la triada, luego el Pixel.</p></div>
+  </div>
+
+  <h2>2. Requisitos previos</h2>
+  <ul>
+    <li>Cuenta personal de <strong>Facebook</strong> (para crear el Business Manager).</li>
+    <li>Cuenta de <strong>Google</strong> (GA4 y Search Console).</li>
+    <li>Cuenta de <strong>Microsoft</strong> (Clarity; tambien entra con Google).</li>
+    <li><strong>Acceso al dominio</strong>: panel de DNS (GoDaddy, Cloudflare) o poder subir un meta-tag al sitio.</li>
+  </ul>
+
+  <h2>3. Orden correcto (el corazon del playbook)</h2>
+  <p>Hay dependencias. La etiqueta marca quien lo hace: <span class="who who-c">C = Cliente/Dueno</span> <span class="who who-i">I = Index01</span> <span class="who who-ci">C + I</span></p>
+
+  <h3>Paso 1 · Business Portfolio (Business Manager) <span class="who who-c">C</span></h3>
+  <ul>
+    <li>En <code>business.facebook.com</code>, crea el <strong>portfolio del negocio</strong> (o usa el existente si es sucursal). Nombre = el negocio.</li>
+    <li>Anade a Index01 como <strong>admin o socio (Partner access)</strong>, no al reves.</li>
+    <li>Gotcha: una persona puede <strong>crear</strong> pocos portfolios; puede <strong>pertenecer</strong> a muchos.</li>
+  </ul>
+
+  <h3>Paso 2 · Pagina de Facebook <span class="who who-ci">C + I</span></h3>
+  <ul>
+    <li>Crea la <strong>Pagina</strong> y <strong>asignala al portfolio</strong> (no a un perfil personal).</li>
+    <li>Completa: nombre, categoria, foto, portada, boton de accion, contacto.</li>
+  </ul>
+
+  <h3>Paso 3 · Instagram Business enlazado <span class="who who-ci">C + I</span></h3>
+  <ul>
+    <li>Convierte el IG a <strong>Business</strong> (Configuracion → Tipo de cuenta).</li>
+    <li><strong>Enlazalo a la Pagina</strong> de Facebook (desde IG o Meta Business Suite).</li>
+    <li>Gotcha: sin IG Business enlazado, no hay anuncios ni metricas completas.</li>
+  </ul>
+
+  <h3>Paso 4 · Verificacion del dominio en Meta <span class="who who-i">I</span></h3>
+  <ul>
+    <li>En Business Settings → <strong>Brand Safety → Dominios</strong>, anade y verifica con <strong>meta-tag</strong> (lo instalo) o <strong>DNS TXT</strong>.</li>
+    <li>Por que importa: sin dominio verificado no configuras bien el <strong>Aggregated Event Measurement</strong> de iOS. Hazlo temprano.</li>
+  </ul>
+
+  <h3>Paso 5 · Meta Pixel (dataset) <span class="who who-i">I</span></h3>
+  <ul>
+    <li>En <strong>Events Manager → Conectar origenes → Web</strong>, crea el <strong>Pixel/Dataset</strong> y copia el <strong>ID</strong> (~15-16 digitos).</li>
+    <li>Lo pego en el cargador con consentimiento (<code>consent.js</code>): solo dispara tras aceptar cookies.</li>
+    <li>Eventos base: <strong>PageView</strong>, <strong>Contact</strong> (clic a telefono/email), <strong>Lead</strong> (envio de formulario).</li>
+    <li>Verifica con <strong>Meta Pixel Helper</strong> (Chrome) que los eventos llegan.</li>
+  </ul>
+
+  <h3>Paso 6 · Google Analytics 4 <span class="who who-i">I</span></h3>
+  <ul>
+    <li>Crea una <strong>propiedad GA4</strong> y un flujo web; copia el <strong>Measurement ID</strong> (<code>G-XXXXXXX</code>); lo instalo (gtag).</li>
+    <li>Marca los eventos clave como <strong>conversiones</strong> (lead, clic a telefono).</li>
+  </ul>
+
+  <h3>Paso 7 · Google Search Console <span class="who who-i">I</span></h3>
+  <ul>
+    <li>Anade la propiedad <strong>por dominio</strong> (verificacion por <strong>DNS TXT</strong>, la mas robusta) o por prefijo (meta-tag, que instalo).</li>
+    <li><strong>Sube el sitemap</strong> (<code>/sitemap.xml</code>).</li>
+    <li><strong>Enlaza GA4 con Search Console</strong> para ver datos de busqueda dentro de GA4.</li>
+  </ul>
+
+  <h3>Paso 8 · Microsoft Clarity <span class="who who-i">I</span></h3>
+  <ul>
+    <li>Crea un <strong>proyecto</strong>, copia el <strong>script</strong>; lo instalo. Da <strong>mapas de calor + grabaciones de sesion</strong>.</li>
+    <li>Es lo que mas ensena: ves que hace la gente. (Opcional) enlazalo con GA4.</li>
+  </ul>
+
+  <h3>Paso 9 · Banner de consentimiento (cookies) <span class="who who-i">I</span></h3>
+  <ul>
+    <li>Instalo un <strong>banner</strong> que carga Pixel/GA4/Clarity <strong>solo tras aceptar</strong>, y una seccion de cookies en la politica de privacidad.</li>
+  </ul>
+
+  <h3>Paso 10 · Verificacion final <span class="who who-ci">C + I</span></h3>
+  <ul>
+    <li>Pixel: eventos en tiempo real (Events Manager + Pixel Helper).</li>
+    <li>GA4: informe <strong>Tiempo real</strong> muestra tu visita.</li>
+    <li>Search Console: propiedad verificada + sitemap correcto.</li>
+    <li>Clarity: aparece tu propia sesion grabada.</li>
+    <li>Consentimiento: aceptar/rechazar funciona y se respeta.</li>
+  </ul>
+
+  <h2>4. Que instala Index01 (el codigo)</h2>
+  <ul>
+    <li><strong>Meta Pixel</strong> (dentro de <code>consent.js</code>, eventos PageView/Contact/Lead).</li>
+    <li><strong>gtag de GA4</strong> (<code>G-XXXXXXX</code>).</li>
+    <li><strong>Script de Microsoft Clarity</strong>.</li>
+    <li><strong>Meta-tags de verificacion</strong>: uno de Meta (dominio) y, si aplica, uno de Google. Son distintos.</li>
+    <li><strong>Banner de consentimiento</strong> + clausula de cookies en la politica de privacidad.</li>
+  </ul>
+  <p>Tu creas las cuentas y me pasas los <strong>IDs</strong>; yo dejo el codigo enchufado y probado.</p>
+
+  <h2>5. Checklist de entrega (clientes terceros)</h2>
+  <ul class="check">
+    <li><input type="checkbox"><span>El <strong>cliente es Owner/Admin</strong> de: Business Portfolio, Pagina, cuenta publicitaria, Pixel.</span></li>
+    <li><input type="checkbox"><span>El <strong>cliente es Owner</strong> de: propiedad GA4, propiedad Search Console, proyecto Clarity.</span></li>
+    <li><input type="checkbox"><span><strong>Index01 aparece como socio/admin</strong> (acceso), no como propietario.</span></li>
+    <li><input type="checkbox"><span><strong>Dominio verificado</strong> en Meta y en Google.</span></li>
+    <li><input type="checkbox"><span><strong>Sitemap enviado</strong> en Search Console.</span></li>
+    <li><input type="checkbox"><span><strong>Eventos probados</strong> (Pixel Helper + GA4 tiempo real + Clarity graba).</span></li>
+    <li><input type="checkbox"><span><strong>Conversiones marcadas</strong> en GA4 y prioridades de eventos en Meta.</span></li>
+    <li><input type="checkbox"><span><strong>Banner de consentimiento</strong> activo y politica de privacidad actualizada.</span></li>
+    <li><input type="checkbox"><span><strong>Documento de accesos</strong> entregado al cliente.</span></li>
+    <li><input type="checkbox"><span><strong>Sign-off</strong> del cliente (todo a su nombre, tu mantienes acceso).</span></li>
+  </ul>
+
+  <h2>6. Gotchas y consejos rapidos</h2>
+  <ul class="gotchas">
+    <li><strong>IG debe ser Business y estar enlazado</strong> a la Pagina, o no hay anuncios ni metricas.</li>
+    <li><strong>Verifica el dominio antes</strong> de pelear con eventos: destraba el resto.</li>
+    <li><strong>Dos verificaciones de dominio distintas</strong>: la de Meta no sirve para Google y viceversa.</li>
+    <li><strong>iOS y bloqueadores</strong> comen senal del pixel de navegador. Evolucion: <strong>Conversions API</strong> server-side.</li>
+    <li><strong>Enlaza GA4 + Search Console</strong>: informe de busqueda dentro de GA4, gratis.</li>
+    <li><strong>Clarity primero para aprender</strong>: los numeros dicen "que"; las grabaciones dicen "por que".</li>
+    <li><strong>Consentimiento desde el dia uno</strong>: es mas facil nacer limpio que arreglarlo despues.</li>
+    <li><strong>Nada de crear activos de cliente bajo tu perfil personal.</strong> Repetir hasta que duela.</li>
+  </ul>
+
+  <footer class="doc">Index01 · Playbook de onboarding de medicion · Documento privado</footer>
+
+</div></div>
+</body>
+</html>
