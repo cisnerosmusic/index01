@@ -38,6 +38,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://index01.net/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/faq.html"/>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://index01.net/en/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/faq.html"/>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://index01.net/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/contact.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/contact.html"/>

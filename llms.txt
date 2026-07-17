@@ -15,6 +15,7 @@
 - [Servicios](https://index01.net/services.html): las cuatro capas que trabajan juntas, diseno web a medida, SEO tecnico, AEO para que la IA cite, y medicion con remarketing.
 - [Proceso](https://index01.net/process.html): como trabaja Index01 paso a paso, desde el diagnostico hasta mantener el sitio vivo, con acuerdo claro por escrito antes de empezar.
 - [Mantenimiento](https://index01.net/maintenance.html): por que un sitio necesita actualizarse, los planes de mantenimiento, la garantia de 30 dias y las preguntas frecuentes.
+- [Preguntas frecuentes](https://index01.net/faq.html): respuestas comerciales directas, sin WordPress ni plantillas, webs estaticas editables, SEO frente a AEO, precios de referencia, propiedad del codigo y el dominio, y por que no hay un portfolio tradicional.
 - [Contacto](https://index01.net/contact.html): formulario y correo para empezar una conversacion, support@index01.net.
 
 ## Servicios
@@ -43,6 +44,7 @@ Index01 is a remote web design, SEO, and AEO studio, based in Miami, Florida, se
 - [Services](https://index01.net/en/services.html)
 - [Process](https://index01.net/en/process.html)
 - [Maintenance](https://index01.net/en/maintenance.html)
+- [FAQ](https://index01.net/en/faq.html)
 - [Contact](https://index01.net/en/contact.html)
 
 ## Nota
