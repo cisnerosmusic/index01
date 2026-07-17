@@ -16,6 +16,7 @@
 - [Proceso](https://index01.net/process.html): como trabaja Index01 paso a paso, desde el diagnostico hasta mantener el sitio vivo, con acuerdo claro por escrito antes de empezar.
 - [Mantenimiento](https://index01.net/maintenance.html): por que un sitio necesita actualizarse, los planes de mantenimiento, la garantia de 30 dias y las preguntas frecuentes.
 - [Preguntas frecuentes](https://index01.net/faq.html): respuestas comerciales directas, sin WordPress ni plantillas, webs estaticas editables, SEO frente a AEO, precios de referencia, propiedad del codigo y el dominio, y por que no hay un portfolio tradicional.
+- [Notas](https://index01.net/notas/): notas tecnicas y novedades del estudio; casos reales de proyectos contados con numeros verificables. Primera nota: el EPK de 07 Sound Solution (07soundsolution.com), la web del ingeniero de sonido de Willy Chirino, una sola pagina de 14 KB que carga en menos de un segundo.
 - [Contacto](https://index01.net/contact.html): formulario, correo y telefono para empezar una conversacion. support@index01.net, +1 (786) 816-9791.
 
 ## Servicios
@@ -46,6 +47,7 @@ Index01 is a remote web design, SEO, and AEO studio, based in Miami, Florida, se
 - [Process](https://index01.net/en/process.html)
 - [Maintenance](https://index01.net/en/maintenance.html)
 - [FAQ](https://index01.net/en/faq.html)
+- [Notes](https://index01.net/en/notes/)
 - [Contact](https://index01.net/en/contact.html)
 
 ## Nota

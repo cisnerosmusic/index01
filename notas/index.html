@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es" data-motion data-aurora>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1ZM182ZFCE');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "xm490prxco");
+</script>
+<title>Notas | Lo que construimos, contado con números | Index01</title>
+<meta name="description" content="Notas técnicas y novedades del estudio Index01: casos reales, decisiones de arquitectura web y lecciones útiles, contados con números verificables, no con alardes.">
+<link rel="canonical" href="https://index01.net/notas/">
+<link rel="alternate" hreflang="es" href="https://index01.net/notas/">
+<link rel="alternate" hreflang="en" href="https://index01.net/en/notes/">
+<link rel="alternate" hreflang="x-default" href="https://index01.net/notas/">
+<meta name="theme-color" content="#090A0E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Index01">
+<meta property="og:title" content="Notas | Lo que construimos, contado con números | Index01">
+<meta property="og:description" content="Casos reales, decisiones de arquitectura y novedades del estudio, contados con números verificables.">
+<meta property="og:url" content="https://index01.net/notas/">
+<meta property="og:image" content="https://index01.net/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Index01 - Diseño web, SEO y AEO">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://index01.net/assets/img/og-image.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/martianmono-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/motion.css">
+<link rel="stylesheet" href="/assets/css/aurora.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://index01.net/notas/",
+  "url": "https://index01.net/notas/",
+  "name": "Notas de Index01",
+  "description": "Notas técnicas y novedades del estudio: casos reales, decisiones de arquitectura web y lecciones útiles, contados con números verificables.",
+  "inLanguage": "es",
+  "isPartOf": { "@id": "https://index01.net/#website" },
+  "publisher": { "@id": "https://index01.net/#org" },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "url": "https://index01.net/notas/07-sound-solution.html", "name": "07 Sound Solution: una credencial de 14 KB que carga en menos de un segundo" }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "inLanguage": "es",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://index01.net/" },
+    { "@type": "ListItem", "position": 2, "name": "Notas", "item": "https://index01.net/notas/" }
+  ]
+}
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "5c8d6c10b9e9449ba1bc7232a4398ba1"}'></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="Index01, inicio">
+      <span>index<b>01</b></span>
+    </a>
+    <nav aria-label="Principal">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/services.html">Servicios</a></li>
+        <li><a href="/process.html">Proceso</a></li>
+        <li><a href="/maintenance.html">Mantenimiento</a></li>
+        <li><a href="/faq.html">Preguntas</a></li>
+        <li><a href="/notas/" aria-current="page">Notas</a></li>
+        <li class="nav-lang"><a href="/en/notes/" hreflang="en" aria-label="View in English">EN</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="/contact.html">Hablemos <span class="arrow">&rarr;</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding-block:clamp(60px,9vw,110px)">
+  <div class="wrap">
+    <span class="eyebrow"><span class="idx">[ notas ]</span> Del estudio</span>
+    <h1>Lo que construimos, <span class="lime">contado con números.</span></h1>
+    <p class="lede">Ni blog ni vitrina. Aquí publicamos notas técnicas y novedades del estudio: casos reales, decisiones de arquitectura y lecciones útiles. Cuando alguien pregunta qué ha hecho Index01, la respuesta está aquí, con cifras que se pueden comprobar, no con alardes.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid cols-2">
+      <article class="card feature reveal">
+        <span class="num mono">2026-07-17 &middot; Caso técnico</span>
+        <h3><a href="/notas/07-sound-solution.html">07 Sound Solution: una credencial de 14 KB que carga en menos de un segundo</a></h3>
+        <p>El EPK del ingeniero de sonido de Willy Chirino: por qué una sola página era la arquitectura correcta, y qué significa que un sitio completo pese menos que una foto de WhatsApp.</p>
+        <a class="btn btn-ghost" href="/notas/07-sound-solution.html">Leer la nota <span class="arrow">&rarr;</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal" data-aurora-host data-trigger="view" data-l="0.8,5" data-r="2.5,8.5">
+      <span class="eyebrow" style="justify-content:center"><span class="idx">[ &rarr; ]</span> Tu proyecto</span>
+      <h2 style="margin-top:1rem">¿Quieres una nota así sobre tu negocio?</h2>
+      <p>Cada proyecto que construimos puede contarse con números. Cuéntanos qué haces y te decimos cómo sería el tuyo.</p>
+      <a class="btn btn-primary" href="/contact.html">Hablemos <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Index01"><span>index<b style="color:var(--accent)">01</b></span></a>
+        <p>Web Design, SEO y AEO en remoto. Sitios rápidos y seguros, construidos para ser la respuesta que dan los buscadores y los asistentes de IA.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><a href="/">Inicio</a><a href="/services.html">Servicios</a><a href="/process.html">Proceso</a><a href="/maintenance.html">Mantenimiento</a><a href="/faq.html">Preguntas</a><a href="/notas/">Notas</a><a href="/contact.html">Contacto</a><a href="/legal.html">Aviso legal</a></div>
+        <div class="footer-col"><span class="footer-h">Contacto</span><a href="mailto:support@index01.net">support@index01.net</a><a href="tel:+17868169791">(786) 816-9791</a><a href="/contact.html">Formulario</a><a href="https://x.com/Index01_net" target="_blank" rel="noopener">X (@Index01_net)</a><a href="https://www.facebook.com/index01.net" target="_blank" rel="noopener">Facebook (@index01.net)</a><a href="https://www.instagram.com/index01net" target="_blank" rel="noopener">Instagram (@index01net)</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Index01 &middot; index01.net</span>
+      <span>Diseño a medida &middot; SEO &middot; AEO</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/motion.js" defer></script>
+<script src="/assets/js/aurora.js" defer></script>
+</body>
+</html>

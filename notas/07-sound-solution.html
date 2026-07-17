@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es" data-motion data-aurora>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1ZM182ZFCE');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "xm490prxco");
+</script>
+<title>07 Sound Solution: una credencial de 14 KB | Notas | Index01</title>
+<meta name="description" content="Caso técnico: el EPK del ingeniero de sonido de Willy Chirino. Una sola página de 14 KB que carga en menos de un segundo, bilingüe, con datos estructurados completos y sin rastreadores.">
+<link rel="canonical" href="https://index01.net/notas/07-sound-solution.html">
+<link rel="alternate" hreflang="es" href="https://index01.net/notas/07-sound-solution.html">
+<link rel="alternate" hreflang="en" href="https://index01.net/en/notes/07-sound-solution.html">
+<link rel="alternate" hreflang="x-default" href="https://index01.net/notas/07-sound-solution.html">
+<meta name="theme-color" content="#090A0E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Index01">
+<meta property="og:title" content="07 Sound Solution: una credencial de 14 KB que carga en menos de un segundo">
+<meta property="og:description" content="Por qué una sola página era la arquitectura correcta para el EPK del ingeniero de sonido de Willy Chirino, contado con números verificables.">
+<meta property="og:url" content="https://index01.net/notas/07-sound-solution.html">
+<meta property="og:image" content="https://index01.net/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Index01 - Diseño web, SEO y AEO">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="article:published_time" content="2026-07-17">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://index01.net/assets/img/og-image.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/martianmono-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/motion.css">
+<link rel="stylesheet" href="/assets/css/aurora.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://index01.net/notas/07-sound-solution.html",
+  "mainEntityOfPage": "https://index01.net/notas/07-sound-solution.html",
+  "headline": "07 Sound Solution: una credencial de 14 KB que carga en menos de un segundo",
+  "description": "Caso técnico del EPK de Adolfo Fito Martínez, ingeniero de sonido de Willy Chirino: por qué una sola página era la arquitectura correcta y qué significan sus números.",
+  "inLanguage": "es",
+  "datePublished": "2026-07-17",
+  "dateModified": "2026-07-17",
+  "author": { "@id": "https://index01.net/#org" },
+  "publisher": { "@id": "https://index01.net/#org" },
+  "image": "https://index01.net/assets/img/og-image.png",
+  "about": { "@type": "WebSite", "url": "https://07soundsolution.com/", "name": "07 Sound Solution" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "inLanguage": "es",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://index01.net/" },
+    { "@type": "ListItem", "position": 2, "name": "Notas", "item": "https://index01.net/notas/" },
+    { "@type": "ListItem", "position": 3, "name": "07 Sound Solution", "item": "https://index01.net/notas/07-sound-solution.html" }
+  ]
+}
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "5c8d6c10b9e9449ba1bc7232a4398ba1"}'></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="Index01, inicio">
+      <span>index<b>01</b></span>
+    </a>
+    <nav aria-label="Principal">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/services.html">Servicios</a></li>
+        <li><a href="/process.html">Proceso</a></li>
+        <li><a href="/maintenance.html">Mantenimiento</a></li>
+        <li><a href="/faq.html">Preguntas</a></li>
+        <li><a href="/notas/">Notas</a></li>
+        <li class="nav-lang"><a href="/en/notes/07-sound-solution.html" hreflang="en" aria-label="View in English">EN</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="/contact.html">Hablemos <span class="arrow">&rarr;</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding-block:clamp(60px,9vw,110px)">
+  <div class="wrap">
+    <span class="eyebrow"><span class="idx">[ nota ]</span> Caso técnico &middot; <span class="mono">2026-07-17</span></span>
+    <h1>07 Sound Solution: una credencial de <span class="lime">14 KB</span> que carga en menos de un segundo.</h1>
+    <p class="lede">Adolfo "Fito" Martínez es ingeniero de sonido en vivo (FOH) con base en Miami e ingeniero principal de Willy Chirino. Necesitaba un EPK: la credencial profesional que se manda por WhatsApp a un promotor y tiene que abrirse al instante, en cualquier teléfono, sin excusas. Esto es lo que construimos y por qué.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">[01]</span> La decisión</span>
+      <h2>Una sola página. Y no es una contradicción.</h2>
+      <p class="lede">En Index01 defendemos "puertas, no muros": una página separada por cada cosa que ofreces. Aquí construimos exactamente una. La arquitectura no es una receta, se decide leyendo el negocio: un EPK responde una sola pregunta, quién es y qué hace. Una pregunta, una puerta. Multiplicar páginas habría sido inventar estructura para lo que es, en esencia, un documento de identidad profesional.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">[02]</span> Los números</span>
+      <h2>Medidos, no estimados.</h2>
+    </div>
+    <div class="grid cols-3">
+      <article class="card feature reveal">
+        <span class="num">14 KB</span>
+        <h3>Transferencia total</h3>
+        <p>Todo el sitio, con estilos y comportamiento incluidos, transfiere unos 14 kilobytes. Menos de lo que pesa una sola foto enviada por WhatsApp. En datos móviles, eso es la diferencia entre abrirse ya o quedarse en blanco.</p>
+      </article>
+      <article class="card feature reveal">
+        <span class="num">&lt; 1 s</span>
+        <h3>Carga completa</h3>
+        <p>En nuestra medición en frío, la página termina de cargar por debajo del segundo, con solo 3 recursos: el HTML, una hoja de estilos y un script. Sin CMS, sin plugins, sin nada que caduque o se rompa solo.</p>
+      </article>
+      <article class="card feature reveal">
+        <span class="num">2 idiomas</span>
+        <h3>En el mismo HTML</h3>
+        <p>Español e inglés conviven en la misma página y el cambio es instantáneo, sin recargar. Un promotor en Miami y otro en Nueva York leen la misma credencial, cada uno en su idioma.</p>
+      </article>
+    </div>
+    <div style="margin-top:28px" class="reveal">
+      <div class="note">
+        <span class="eyebrow"><span class="idx">[ + ]</span> La capa que no se ve</span>
+        <p style="margin:0">Bajo la superficie, la página lleva datos estructurados completos: la persona, el servicio profesional con su geolocalización y un catálogo de cinco servicios, más un archivo llms.txt que explica el sitio a los asistentes de IA. Cuando alguien (o una IA) pregunta quién hace el sonido de Willy Chirino, hay una fuente limpia que citar. Y sin un solo rastreador: un EPK no necesita cookies, necesita respeto por quien lo abre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid cols-2" style="align-items:center;gap:clamp(28px,5vw,64px)">
+      <div class="reveal">
+        <span class="eyebrow"><span class="idx">[03]</span> Lo que significa</span>
+        <h2 style="margin-top:1rem">Un sitio que trabaja como credencial.</h2>
+      </div>
+      <div class="reveal">
+        <p class="lede">Este sitio no compite por búsquedas masivas: trabaja como una tarjeta de presentación que siempre está lista y como una fuente citable sobre la trayectoria de Fito. Puedes comprobarlo tú mismo en <a href="https://07soundsolution.com/" target="_blank" rel="noopener">07soundsolution.com</a>: ábrelo en el teléfono y cuenta el tiempo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal" data-aurora-host data-trigger="view" data-l="0.8,5" data-r="2.5,8.5">
+      <span class="eyebrow" style="justify-content:center"><span class="idx">[ &rarr; ]</span> Tu proyecto</span>
+      <h2 style="margin-top:1rem">¿Tu negocio necesita una credencial así de directa?</h2>
+      <p>Leemos tu negocio y decidimos la arquitectura que le corresponde: a veces son veinte puertas, a veces es una sola muy bien construida.</p>
+      <a class="btn btn-primary" href="/contact.html">Hablemos <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Index01"><span>index<b style="color:var(--accent)">01</b></span></a>
+        <p>Web Design, SEO y AEO en remoto. Sitios rápidos y seguros, construidos para ser la respuesta que dan los buscadores y los asistentes de IA.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><a href="/">Inicio</a><a href="/services.html">Servicios</a><a href="/process.html">Proceso</a><a href="/maintenance.html">Mantenimiento</a><a href="/faq.html">Preguntas</a><a href="/notas/">Notas</a><a href="/contact.html">Contacto</a><a href="/legal.html">Aviso legal</a></div>
+        <div class="footer-col"><span class="footer-h">Contacto</span><a href="mailto:support@index01.net">support@index01.net</a><a href="tel:+17868169791">(786) 816-9791</a><a href="/contact.html">Formulario</a><a href="https://x.com/Index01_net" target="_blank" rel="noopener">X (@Index01_net)</a><a href="https://www.facebook.com/index01.net" target="_blank" rel="noopener">Facebook (@index01.net)</a><a href="https://www.instagram.com/index01net" target="_blank" rel="noopener">Instagram (@index01net)</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Index01 &middot; index01.net</span>
+      <span>Diseño a medida &middot; SEO &middot; AEO</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/motion.js" defer></script>
+<script src="/assets/js/aurora.js" defer></script>
+</body>
+</html>

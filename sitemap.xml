@@ -56,6 +56,42 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://index01.net/notas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/notas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/notes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/notas/"/>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://index01.net/notas/07-sound-solution.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/notas/07-sound-solution.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/notes/07-sound-solution.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/notas/07-sound-solution.html"/>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://index01.net/en/notes/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/notas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/notes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/notas/"/>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://index01.net/en/notes/07-sound-solution.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/notas/07-sound-solution.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/notes/07-sound-solution.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://index01.net/notas/07-sound-solution.html"/>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://index01.net/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://index01.net/contact.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://index01.net/en/contact.html"/>
