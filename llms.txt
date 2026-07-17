@@ -16,7 +16,7 @@
 - [Proceso](https://index01.net/process.html): como trabaja Index01 paso a paso, desde el diagnostico hasta mantener el sitio vivo, con acuerdo claro por escrito antes de empezar.
 - [Mantenimiento](https://index01.net/maintenance.html): por que un sitio necesita actualizarse, los planes de mantenimiento, la garantia de 30 dias y las preguntas frecuentes.
 - [Preguntas frecuentes](https://index01.net/faq.html): respuestas comerciales directas, sin WordPress ni plantillas, webs estaticas editables, SEO frente a AEO, precios de referencia, propiedad del codigo y el dominio, y por que no hay un portfolio tradicional.
-- [Contacto](https://index01.net/contact.html): formulario y correo para empezar una conversacion, support@index01.net.
+- [Contacto](https://index01.net/contact.html): formulario, correo y telefono para empezar una conversacion. support@index01.net, +1 (786) 816-9791.
 
 ## Servicios
 
@@ -33,6 +33,7 @@
 - Ubicacion: estudio remoto, con base en Miami, Florida (atiende a distancia)
 - Zona de servicio: a distancia, en cualquier lugar; atencion en espanol e ingles
 - Correo: support@index01.net
+- Telefono: +1 (786) 816-9791 (si contesta el asistente, deja mensaje y devolvemos la llamada)
 - Idioma principal: espanol (sitio disponible tambien en ingles bajo /en/)
 - Politica de posicionamiento: el sitio se entrega tecnicamente listo para ser encontrado y citado, pero no se garantiza una posicion concreta ni un plazo; la autoridad se construye con el tiempo.
 
