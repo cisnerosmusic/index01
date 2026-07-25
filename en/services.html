@@ -3,22 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
+<!-- Consentimiento primero: gtag arranca denegado; Clarity solo se carga si el visitante acepta (consent.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
 </script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "xm490prxco");
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>Services | Web Design, SEO, AEO &amp; Measurement | Index01</title>
 <meta name="description" content="Index01 services: custom web design, technical SEO, AEO so AI cites you, and measurement with remarketing. Every service explained clearly.">
 <link rel="canonical" href="https://index01.net/en/services.html">
@@ -60,10 +58,10 @@
     "@type": "OfferCatalog",
     "name": "Index01 services",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom web design", "description": "A site designed for what your business is, not a template. Clean, secure, and with your brand up front." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technical SEO", "description": "Fast loading, perfect mobile behavior, and the foundations a search engine actually measures." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AEO, optimization for AI answers", "description": "Structured data and architecture so AI assistants read and cite you." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Measurement and remarketing", "description": "Meta and Google pixels, properly installed and with consent, so you know where your people come from." } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom web design", "url": "https://index01.net/en/web-design.html", "description": "A site designed for what your business is, not a template. Clean, secure, and with your brand up front." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technical SEO", "url": "https://index01.net/en/technical-seo.html", "description": "Fast loading, perfect mobile behavior, and the foundations a search engine actually measures." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AEO, optimization for AI answers", "url": "https://index01.net/en/aeo.html", "description": "Structured data and architecture so AI assistants read and cite you." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Measurement and remarketing", "url": "https://index01.net/en/measurement.html", "description": "Meta and Google pixels, properly installed and with consent, so you know where your people come from." } }
     ]
   }
 }
@@ -125,6 +123,7 @@
         <h3 style="margin-top:.6rem">Custom web design</h3>
         <p>You don't look like everyone else, so your website shouldn't either. we read your business and give it a face of its own, clean and secure, with your brand up front and none of that generic catalog feel you can spot a mile away. When someone walks in, they sense a serious business is here.</p>
         <ul><li>Custom, not a template</li><li>Identity up front</li><li>Accessibility</li><li>Truly responsive</li></ul>
+        <a class="btn btn-ghost" href="/en/web-design.html" style="margin-top:14px">See design in detail <span class="arrow">&rarr;</span></a>
       </div>
     </div>
 
@@ -135,6 +134,7 @@
         <h3 style="margin-top:.6rem">Technical SEO, the foundations</h3>
         <p>Underneath, your site meets what a search engine actually measures today. It loads fast, works perfectly on the phone, and is structured into separate pages: each one its own door that the search engine can read and understand, instead of an infinite-scroll wall where everything gets lost.</p>
         <ul><li>Core Web Vitals</li><li>Speed</li><li>Separate pages</li><li>Sitemap</li></ul>
+        <a class="btn btn-ghost" href="/en/technical-seo.html" style="margin-top:14px">See SEO in detail <span class="arrow">&rarr;</span></a>
       </div>
     </div>
 
@@ -145,6 +145,7 @@
         <h3 style="margin-top:.6rem">AEO, get the AI to cite you</h3>
         <p>This is the layer few are building yet. With structured data we explain to the machine who you are, what you do, and where you are. So when someone asks an assistant for a service like yours in your area, your name is the one that comes up as the answer, sources and all.</p>
         <ul><li>Structured data</li><li>Schema.org</li><li>llms.txt</li><li>Citable content</li></ul>
+        <a class="btn btn-ghost" href="/en/aeo.html" style="margin-top:14px">See AEO in detail <span class="arrow">&rarr;</span></a>
       </div>
     </div>
 
@@ -155,6 +156,7 @@
         <h3 style="margin-top:.6rem">Measurement and remarketing</h3>
         <p>If your business needs it, we install the Meta and Google pixels so you know where your people come from and can reach them again. We do it right, with the consent the law requires, not hidden. That protects you, which is what many overlook and later regret.</p>
         <ul><li>Meta Pixel</li><li>Google</li><li>Legal consent</li><li>Attribution</li></ul>
+        <a class="btn btn-ghost" href="/en/measurement.html" style="margin-top:14px">See measurement in detail <span class="arrow">&rarr;</span></a>
       </div>
     </div>
 
@@ -189,13 +191,13 @@
         <p>Web Design, SEO, and AEO, fully remote. Fast, secure sites built to be the answer that search engines and AI assistants give.</p>
       </div>
       <div class="footer-cols">
-        <div class="footer-col"><a href="/en/">Home</a><a href="/en/services.html">Services</a><a href="/en/process.html">Process</a><a href="/en/maintenance.html">Maintenance</a><a href="/en/faq.html">FAQ</a><a href="/en/notes/">Notes</a><a href="/en/contact.html">Contact</a><a href="/en/legal.html">Legal</a></div>
+        <div class="footer-col"><a href="/en/">Home</a><a href="/en/services.html">Services</a><a href="/en/process.html">Process</a><a href="/en/maintenance.html">Maintenance</a><a href="/en/faq.html">FAQ</a><a href="/en/notes/">Notes</a><a href="/en/about.html">About the studio</a><a href="/en/contact.html">Contact</a><a href="/en/legal.html">Legal</a></div>
         <div class="footer-col"><span class="footer-h">Contact</span><a href="mailto:support@index01.net">support@index01.net</a><a href="tel:+17868169791">(786) 816-9791</a><a href="/en/contact.html">Form</a><a href="https://x.com/Index01_net" target="_blank" rel="noopener">X (@Index01_net)</a><a href="https://www.facebook.com/index01.net" target="_blank" rel="noopener">Facebook (@index01.net)</a><a href="https://www.instagram.com/index01net" target="_blank" rel="noopener">Instagram (@index01net)</a></div>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; <span data-year>2026</span> Index01 &middot; index01.net</span>
-      <span>Custom design &middot; SEO &middot; AEO</span>
+      <span>Custom design &middot; SEO &middot; AEO &middot; <a href="#" data-consent-open>Cookies</a></span>
     </div>
   </div>
 </footer>
@@ -203,5 +205,6 @@
 <script src="/assets/js/main.js" defer></script>
 <script src="/assets/js/motion.js" defer></script>
 <script src="/assets/js/aurora.js" defer></script>
+<script src="/assets/js/consent.js" defer></script>
 </body>
 </html>

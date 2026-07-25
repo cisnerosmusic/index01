@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es" data-motion data-aurora>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Consentimiento primero: gtag arranca denegado; Clarity solo se carga si el visitante acepta (consent.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-1ZM182ZFCE');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
+<title>AEO: optimización para respuestas de IA | Index01</title>
+<meta name="description" content="Qué es el AEO y cómo lo construye Index01: datos estructurados, llms.txt y arquitectura citable para que ChatGPT, Gemini y Google te den como respuesta.">
+<link rel="canonical" href="https://index01.net/aeo.html">
+<link rel="alternate" hreflang="es" href="https://index01.net/aeo.html">
+<link rel="alternate" hreflang="en" href="https://index01.net/en/aeo.html">
+<link rel="alternate" hreflang="x-default" href="https://index01.net/aeo.html">
+<meta name="theme-color" content="#090A0E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Index01">
+<meta property="og:title" content="AEO: optimización para respuestas de IA | Index01">
+<meta property="og:description" content="La capa que pocos construyen todavía: que ChatGPT, Gemini y Google te den como respuesta, con fuente y todo.">
+<meta property="og:url" content="https://index01.net/aeo.html">
+<meta property="og:image" content="https://index01.net/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Index01 - Diseño web, SEO y AEO">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://index01.net/assets/img/og-image.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/martianmono-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/motion.css">
+<link rel="stylesheet" href="/assets/css/aurora.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://index01.net/aeo.html#service",
+  "name": "AEO: optimización para respuestas de IA",
+  "serviceType": "Answer Engine Optimization (AEO)",
+  "url": "https://index01.net/aeo.html",
+  "description": "AEO (Answer Engine Optimization): datos estructurados schema.org, llms.txt, robots.txt abierto a rastreadores de IA y arquitectura de páginas citables, para que ChatGPT, Gemini, Perplexity y la respuesta automática de Google citen a la marca como fuente.",
+  "provider": { "@id": "https://index01.net/#org" },
+  "areaServed": { "@type": "Place", "name": "Remoto, atención a distancia" },
+  "inLanguage": "es"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "es",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el AEO?",
+      "acceptedAnswer": { "@type": "Answer", "text": "AEO son las siglas de Answer Engine Optimization: optimización para motores de respuesta. Es el trabajo de preparar un sitio web para que los asistentes de inteligencia artificial, como ChatGPT, Gemini o Perplexity, y la respuesta automática de Google, puedan leerlo, entenderlo y citarlo como fuente cuando alguien pregunta por un servicio o un negocio como el tuyo." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué se diferencia el AEO del SEO?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El SEO trabaja para que aparezcas en una lista de resultados y alguien te elija. El AEO trabaja para que seas la respuesta única que el asistente entrega, con tu nombre y tu enlace como fuente. Comparten cimientos, como la velocidad y la estructura, pero el AEO añade capas propias: datos estructurados completos, un archivo llms.txt que explica el sitio a las máquinas, un robots.txt que da la bienvenida a los rastreadores de IA y contenido organizado en respuestas claras y citables." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se logra que una IA cite a un negocio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Con tres piezas que trabajan juntas. Primero, datos estructurados schema.org que le dicen a la máquina quién eres, qué haces y dónde estás, sin ambigüedad. Segundo, una arquitectura de páginas separadas donde cada página responde una pregunta concreta, porque las IA citan respuestas limpias, no muros de texto. Tercero, frescura: estos sistemas tienden a citar lo que se actualizó hace poco, por eso el mantenimiento continuo forma parte de la estrategia." }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "inLanguage": "es",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://index01.net/" },
+    { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://index01.net/services.html" },
+    { "@type": "ListItem", "position": 3, "name": "AEO", "item": "https://index01.net/aeo.html" }
+  ]
+}
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "5c8d6c10b9e9449ba1bc7232a4398ba1"}'></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="Index01, inicio">
+      <span>index<b>01</b></span>
+    </a>
+    <nav aria-label="Principal">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/services.html">Servicios</a></li>
+        <li><a href="/process.html">Proceso</a></li>
+        <li><a href="/maintenance.html">Mantenimiento</a></li>
+        <li><a href="/faq.html">Preguntas</a></li>
+        <li><a href="/notas/">Notas</a></li>
+        <li class="nav-lang"><a href="/en/aeo.html" hreflang="en" aria-label="View in English">EN</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="/contact.html">Hablemos <span class="arrow">&rarr;</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" data-aurora-host data-trigger="load" data-l="4,9" data-r="7,14" style="padding-block:clamp(60px,9vw,110px)">
+  <div class="wrap">
+    <span class="eyebrow"><span class="idx">[ servicio ]</span> AEO &middot; La capa nueva</span>
+    <h1>Que la IA <span class="lime">te cite a ti</span>.</h1>
+    <p class="lede">AEO significa Answer Engine Optimization: optimización para motores de respuesta. Es preparar tu sitio para que ChatGPT, Gemini, Perplexity y la respuesta automática de Google puedan leerte, entenderte y citarte como fuente. Cada vez más gente pregunta en vez de buscar; el AEO decide si tu nombre aparece en esa respuesta o si aparece el de tu competencia.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="/contact.html">Hablemos de tu negocio <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-ghost" href="/services.html">Todos los servicios</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">[01]</span> Cómo se construye</span>
+      <h2>Tres piezas que trabajan juntas.</h2>
+    </div>
+    <div class="grid cols-3">
+      <article class="card feature reveal">
+        <span class="num">01 / Datos</span>
+        <h3>Datos estructurados</h3>
+        <p>Schema.org es el idioma en que se le explica a una máquina quién eres, qué haces y dónde estás, sin ambigüedad. Lo escribimos completo y a mano para cada página: el negocio, los servicios, las preguntas frecuentes, las migas de pan.</p>
+        <span class="tag tag-accent">Schema.org</span>
+      </article>
+      <article class="card feature reveal">
+        <span class="num">02 / Acceso</span>
+        <h3>Puertas abiertas a la IA</h3>
+        <p>Un archivo llms.txt que resume tu sitio para los asistentes, y un robots.txt que da la bienvenida explícita a sus rastreadores: GPTBot, ClaudeBot, PerplexityBot, Google-Extended. Si quieres que te citen, primero tienen que poder leerte.</p>
+        <span class="tag tag-accent">llms.txt</span>
+      </article>
+      <article class="card feature reveal">
+        <span class="num">03 / Forma</span>
+        <h3>Respuestas citables</h3>
+        <p>Las IA citan respuestas limpias, no muros de texto. Por eso cada página responde una pregunta concreta, con su título claro y su contenido directo. Es nuestra arquitectura de puertas, no muros, aplicada a la capa de respuesta.</p>
+        <span class="tag tag-accent">Puertas, no muros</span>
+      </article>
+    </div>
+    <div style="margin-top:28px" class="reveal">
+      <div class="note">
+        <span class="eyebrow"><span class="idx">[ + ]</span> La frescura importa</span>
+        <p style="margin:0">Estos sistemas tienden a citar lo que se actualizó hace poco. Un sitio que se queda quieto pierde terreno solo, aunque esté bien construido. Por eso el AEO no es un trabajo de una vez: se sostiene con <a href="/maintenance.html" style="color:var(--accent)">mantenimiento continuo</a> que mantiene tus datos vivos y tu sitio citable mes tras mes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid cols-2" style="align-items:center;gap:clamp(28px,5vw,64px)">
+      <div class="reveal">
+        <span class="eyebrow"><span class="idx">[02]</span> Por qué ahora</span>
+        <h2 style="margin-top:1rem">Una ventaja que casi nadie aprovecha todavía.</h2>
+      </div>
+      <div class="reveal">
+        <p class="lede">Muchas agencias siguen pensando solo en palabras clave, y está bien: ese mundo aún existe. Pero el cambio ya empezó, y los negocios que se estructuren primero para ser citados van a llevar años de ventaja cuando sea lo normal. Practicamos lo que vendemos: este mismo sitio está construido con AEO completo, y puedes comprobarlo preguntándole por Index01 a cualquier asistente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">[03]</span> Preguntas sobre este servicio</span>
+      <h2>Lo que suelen preguntarnos del AEO.</h2>
+    </div>
+    <div class="grid cols-3">
+      <article class="card feature reveal">
+        <h3>¿Qué es el AEO?</h3>
+        <p>Optimización para motores de respuesta: preparar tu sitio para que los asistentes de IA y la respuesta automática de Google puedan leerlo, entenderlo y citarlo como fuente cuando alguien pregunta por un servicio o un negocio como el tuyo.</p>
+      </article>
+      <article class="card feature reveal">
+        <h3>¿En qué se diferencia del SEO?</h3>
+        <p>El <a href="/seo-tecnico.html">SEO</a> trabaja para que aparezcas en una lista y alguien te elija. El AEO trabaja para que seas la respuesta única que entrega el asistente, con tu nombre como fuente. Comparten cimientos; el AEO añade datos estructurados, llms.txt y contenido citable.</p>
+      </article>
+      <article class="card feature reveal">
+        <h3>¿Cómo se logra que te citen?</h3>
+        <p>Datos estructurados que eliminan la ambigüedad, páginas que responden preguntas concretas y frescura constante. No hay truco ni atajo: es construir el sitio en el idioma que las máquinas entienden y mantenerlo vivo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal" data-aurora-host data-trigger="view" data-l="0.8,5" data-r="2.5,8.5">
+      <span class="eyebrow" style="justify-content:center"><span class="idx">[ &rarr; ]</span> Empezar</span>
+      <h2 style="margin-top:1rem">Cuando pregunten por lo que haces, que la respuesta seas tú.</h2>
+      <p>Cuéntanos qué haces y en qué zona, y te decimos cómo te construimos para que te citen.</p>
+      <a class="btn btn-primary" href="/contact.html">Hablemos de tu negocio <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Index01"><span>index<b style="color:var(--accent)">01</b></span></a>
+        <p>Web Design, SEO y AEO en remoto. Sitios rápidos y seguros, construidos para ser la respuesta que dan los buscadores y los asistentes de IA.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><a href="/">Inicio</a><a href="/services.html">Servicios</a><a href="/process.html">Proceso</a><a href="/maintenance.html">Mantenimiento</a><a href="/faq.html">Preguntas</a><a href="/notas/">Notas</a><a href="/sobre.html">Sobre el estudio</a><a href="/contact.html">Contacto</a><a href="/legal.html">Aviso legal</a></div>
+        <div class="footer-col"><span class="footer-h">Contacto</span><a href="mailto:support@index01.net">support@index01.net</a><a href="tel:+17868169791">(786) 816-9791</a><a href="/contact.html">Formulario</a><a href="https://x.com/Index01_net" target="_blank" rel="noopener">X (@Index01_net)</a><a href="https://www.facebook.com/index01.net" target="_blank" rel="noopener">Facebook (@index01.net)</a><a href="https://www.instagram.com/index01net" target="_blank" rel="noopener">Instagram (@index01net)</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Index01 &middot; index01.net</span>
+      <span>Diseño a medida &middot; SEO &middot; AEO &middot; <a href="#" data-consent-open>Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/motion.js" defer></script>
+<script src="/assets/js/aurora.js" defer></script>
+<script src="/assets/js/consent.js" defer></script>
+</body>
+</html>

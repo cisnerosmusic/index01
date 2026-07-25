@@ -3,22 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
+<!-- Consentimiento primero: gtag arranca denegado; Clarity solo se carga si el visitante acepta (consent.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
 </script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "xm490prxco");
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>Servicios | Diseño web, SEO, AEO y medición | Index01</title>
 <meta name="description" content="Servicios de Index01: diseño web a medida, SEO técnico, AEO para que la IA te cite y medición con remarketing. Cada servicio explicado con claridad.">
 <link rel="canonical" href="https://index01.net/services.html">
@@ -60,10 +58,10 @@
     "@type": "OfferCatalog",
     "name": "Servicios de Index01",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño web a medida", "description": "Un sitio diseñado para lo que tu negocio es, no una plantilla. Limpio, seguro y con tu marca al frente." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO técnico", "description": "Carga rápida, comportamiento perfecto en móvil y los cimientos que de verdad mide un buscador." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AEO, optimización para respuestas de IA", "description": "Datos estructurados y arquitectura para que los asistentes de inteligencia artificial te lean y te citen." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Medición y remarketing", "description": "Píxeles de Meta y Google, bien instalados y con consentimiento, para saber de dónde viene tu gente." } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño web a medida", "url": "https://index01.net/diseno-web.html", "description": "Un sitio diseñado para lo que tu negocio es, no una plantilla. Limpio, seguro y con tu marca al frente." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO técnico", "url": "https://index01.net/seo-tecnico.html", "description": "Carga rápida, comportamiento perfecto en móvil y los cimientos que de verdad mide un buscador." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AEO, optimización para respuestas de IA", "url": "https://index01.net/aeo.html", "description": "Datos estructurados y arquitectura para que los asistentes de inteligencia artificial te lean y te citen." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Medición y remarketing", "url": "https://index01.net/medicion.html", "description": "Píxeles de Meta y Google, bien instalados y con consentimiento, para saber de dónde viene tu gente." } }
     ]
   }
 }
@@ -125,6 +123,7 @@
         <h3 style="margin-top:.6rem">Diseño web a medida</h3>
         <p>No te pareces a todos, así que tu web tampoco. Leemos tu negocio y le damos una cara propia, limpia y segura, con tu marca al frente y sin ese aire de catálogo genérico que se nota a kilómetros. Cuando alguien entra, siente que ahí hay un negocio serio.</p>
         <ul><li>A medida, no plantilla</li><li>Identidad al frente</li><li>Accesibilidad</li><li>Responsive real</li></ul>
+        <a class="btn btn-ghost" href="/diseno-web.html" style="margin-top:14px">Ver el diseño en detalle <span class="arrow">&rarr;</span></a>
       </div>
     </div>
 
@@ -135,6 +134,7 @@
         <h3 style="margin-top:.6rem">SEO técnico, los cimientos</h3>
         <p>Por debajo, tu web cumple lo que de verdad mide hoy un buscador. Carga rápido, funciona perfecto en el teléfono y se estructura en páginas separadas: cada una es una puerta propia que el buscador puede leer y entender, en vez de un muro de scroll infinito donde todo se pierde.</p>
         <ul><li>Core Web Vitals</li><li>Velocidad</li><li>Páginas separadas</li><li>Mapa del sitio</li></ul>
+        <a class="btn btn-ghost" href="/seo-tecnico.html" style="margin-top:14px">Ver el SEO en detalle <span class="arrow">&rarr;</span></a>
       </div>
     </div>
 
@@ -145,6 +145,7 @@
         <h3 style="margin-top:.6rem">AEO, que la IA te cite</h3>
         <p>Esta es la capa que pocos construyen todavía. Con datos estructurados le explicamos a la máquina quién eres, qué haces y dónde estás. Así, cuando alguien le pregunta a un asistente por un servicio como el tuyo en tu zona, tu nombre es el que aparece como respuesta, con fuente y todo.</p>
         <ul><li>Datos estructurados</li><li>Schema.org</li><li>llms.txt</li><li>Contenido citable</li></ul>
+        <a class="btn btn-ghost" href="/aeo.html" style="margin-top:14px">Ver el AEO en detalle <span class="arrow">&rarr;</span></a>
       </div>
     </div>
 
@@ -155,6 +156,7 @@
         <h3 style="margin-top:.6rem">Medición y remarketing</h3>
         <p>Si tu negocio lo necesita, instalamos los píxeles de Meta y Google para que sepas de dónde viene tu gente y puedas volver a alcanzarla. Lo hacemos bien hecho, con el consentimiento que exige la ley, no escondido. Eso te protege a ti, que es lo que muchos pasan por alto y luego es un problema.</p>
         <ul><li>Meta Pixel</li><li>Google</li><li>Consentimiento legal</li><li>Atribución</li></ul>
+        <a class="btn btn-ghost" href="/medicion.html" style="margin-top:14px">Ver la medición en detalle <span class="arrow">&rarr;</span></a>
       </div>
     </div>
 
@@ -189,13 +191,13 @@
         <p>Web Design, SEO y AEO en remoto. Sitios rápidos y seguros, construidos para ser la respuesta que dan los buscadores y los asistentes de IA.</p>
       </div>
       <div class="footer-cols">
-        <div class="footer-col"><a href="/">Inicio</a><a href="/services.html">Servicios</a><a href="/process.html">Proceso</a><a href="/maintenance.html">Mantenimiento</a><a href="/faq.html">Preguntas</a><a href="/notas/">Notas</a><a href="/contact.html">Contacto</a><a href="/legal.html">Aviso legal</a></div>
+        <div class="footer-col"><a href="/">Inicio</a><a href="/services.html">Servicios</a><a href="/process.html">Proceso</a><a href="/maintenance.html">Mantenimiento</a><a href="/faq.html">Preguntas</a><a href="/notas/">Notas</a><a href="/sobre.html">Sobre el estudio</a><a href="/contact.html">Contacto</a><a href="/legal.html">Aviso legal</a></div>
         <div class="footer-col"><span class="footer-h">Contacto</span><a href="mailto:support@index01.net">support@index01.net</a><a href="tel:+17868169791">(786) 816-9791</a><a href="/contact.html">Formulario</a><a href="https://x.com/Index01_net" target="_blank" rel="noopener">X (@Index01_net)</a><a href="https://www.facebook.com/index01.net" target="_blank" rel="noopener">Facebook (@index01.net)</a><a href="https://www.instagram.com/index01net" target="_blank" rel="noopener">Instagram (@index01net)</a></div>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; <span data-year>2026</span> Index01 &middot; index01.net</span>
-      <span>Diseño a medida &middot; SEO &middot; AEO</span>
+      <span>Diseño a medida &middot; SEO &middot; AEO &middot; <a href="#" data-consent-open>Cookies</a></span>
     </div>
   </div>
 </footer>
@@ -203,5 +205,6 @@
 <script src="/assets/js/main.js" defer></script>
 <script src="/assets/js/motion.js" defer></script>
 <script src="/assets/js/aurora.js" defer></script>
+<script src="/assets/js/consent.js" defer></script>
 </body>
 </html>

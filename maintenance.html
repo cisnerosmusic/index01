@@ -3,22 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
+<!-- Consentimiento primero: gtag arranca denegado; Clarity solo se carga si el visitante acepta (consent.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
 </script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "xm490prxco");
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>Mantenimiento | Mantén tu web viva y citada | Index01</title>
 <meta name="description" content="Las IA premian lo fresco. El mantenimiento de Index01 mantiene tu sitio actualizado, seguro y citable para que sigas siendo la respuesta dentro de un año.">
 <link rel="canonical" href="https://index01.net/maintenance.html">
@@ -261,13 +259,13 @@
         <p>Web Design, SEO y AEO en remoto. Sitios rápidos y seguros, construidos para ser la respuesta que dan los buscadores y los asistentes de IA.</p>
       </div>
       <div class="footer-cols">
-        <div class="footer-col"><a href="/">Inicio</a><a href="/services.html">Servicios</a><a href="/process.html">Proceso</a><a href="/maintenance.html">Mantenimiento</a><a href="/faq.html">Preguntas</a><a href="/notas/">Notas</a><a href="/contact.html">Contacto</a><a href="/legal.html">Aviso legal</a></div>
+        <div class="footer-col"><a href="/">Inicio</a><a href="/services.html">Servicios</a><a href="/process.html">Proceso</a><a href="/maintenance.html">Mantenimiento</a><a href="/faq.html">Preguntas</a><a href="/notas/">Notas</a><a href="/sobre.html">Sobre el estudio</a><a href="/contact.html">Contacto</a><a href="/legal.html">Aviso legal</a></div>
         <div class="footer-col"><span class="footer-h">Contacto</span><a href="mailto:support@index01.net">support@index01.net</a><a href="tel:+17868169791">(786) 816-9791</a><a href="/contact.html">Formulario</a><a href="https://x.com/Index01_net" target="_blank" rel="noopener">X (@Index01_net)</a><a href="https://www.facebook.com/index01.net" target="_blank" rel="noopener">Facebook (@index01.net)</a><a href="https://www.instagram.com/index01net" target="_blank" rel="noopener">Instagram (@index01net)</a></div>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; <span data-year>2026</span> Index01 &middot; index01.net</span>
-      <span>Diseño a medida &middot; SEO &middot; AEO</span>
+      <span>Diseño a medida &middot; SEO &middot; AEO &middot; <a href="#" data-consent-open>Cookies</a></span>
     </div>
   </div>
 </footer>
@@ -275,5 +273,6 @@
 <script src="/assets/js/main.js" defer></script>
 <script src="/assets/js/motion.js" defer></script>
 <script src="/assets/js/aurora.js" defer></script>
+<script src="/assets/js/consent.js" defer></script>
 </body>
 </html>

@@ -3,22 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
+<!-- Consentimiento primero: gtag arranca denegado; Clarity solo se carga si el visitante acepta (consent.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
 </script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "xm490prxco");
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>Index01 | Web Design, SEO &amp; AEO</title>
 <meta name="description" content="Index01 builds fast, secure websites designed to be the answer Google and AI assistants give. Custom design, SEO, and AEO with 2026 best practices.">
 <link rel="canonical" href="https://index01.net/en/">
@@ -261,7 +259,7 @@
           <a href="/en/">Home</a>
           <a href="/en/services.html">Services</a>
           <a href="/en/process.html">Process</a>
-          <a href="/en/maintenance.html">Maintenance</a><a href="/en/faq.html">FAQ</a><a href="/en/notes/">Notes</a>
+          <a href="/en/maintenance.html">Maintenance</a><a href="/en/faq.html">FAQ</a><a href="/en/notes/">Notes</a><a href="/en/about.html">About the studio</a>
           <a href="/en/contact.html">Contact</a><a href="/en/legal.html">Legal</a>
         </div>
         <div class="footer-col">
@@ -275,7 +273,7 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; <span data-year>2026</span> Index01 &middot; index01.net</span>
-      <span>Custom design &middot; SEO &middot; AEO</span>
+      <span>Custom design &middot; SEO &middot; AEO &middot; <a href="#" data-consent-open>Cookies</a></span>
     </div>
   </div>
 </footer>
@@ -283,5 +281,6 @@
 <script src="/assets/js/main.js" defer></script>
 <script src="/assets/js/motion.js" defer></script>
 <script src="/assets/js/aurora.js" defer></script>
+<script src="/assets/js/consent.js" defer></script>
 </body>
 </html>

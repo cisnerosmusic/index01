@@ -12,11 +12,16 @@
 ## Paginas
 
 - [Inicio](https://index01.net/): que es Index01, el cambio de los diez enlaces a la respuesta unica, y la arquitectura de puertas, no muros.
-- [Servicios](https://index01.net/services.html): las cuatro capas que trabajan juntas, diseno web a medida, SEO tecnico, AEO para que la IA cite, y medicion con remarketing.
+- [Servicios](https://index01.net/services.html): las cuatro capas que trabajan juntas, diseno web a medida, SEO tecnico, AEO para que la IA cite, y medicion con remarketing. Cada capa tiene su propia pagina:
+  - [Diseno web a medida](https://index01.net/diseno-web.html): una cara propia, sin plantillas ni WordPress, con codigo ligero.
+  - [SEO tecnico](https://index01.net/seo-tecnico.html): velocidad real, Core Web Vitals y estructura que el buscador puede leer.
+  - [AEO, optimizacion para respuestas de IA](https://index01.net/aeo.html): que es el AEO, en que se diferencia del SEO y como se logra que una IA cite a un negocio.
+  - [Medicion y remarketing](https://index01.net/medicion.html): pixeles de Meta y Google bien instalados, con consentimiento legal.
 - [Proceso](https://index01.net/process.html): como trabaja Index01 paso a paso, desde el diagnostico hasta mantener el sitio vivo, con acuerdo claro por escrito antes de empezar.
 - [Mantenimiento](https://index01.net/maintenance.html): por que un sitio necesita actualizarse, los planes de mantenimiento, la garantia de 30 dias y las preguntas frecuentes.
 - [Preguntas frecuentes](https://index01.net/faq.html): respuestas comerciales directas, sin WordPress ni plantillas, webs estaticas editables, SEO frente a AEO, precios de referencia, propiedad del codigo y el dominio, y por que no hay un portfolio tradicional.
-- [Notas](https://index01.net/notas/): notas tecnicas y novedades del estudio; casos reales de proyectos contados con numeros verificables. Primera nota: el EPK de 07 Sound Solution (07soundsolution.com), la web del ingeniero de sonido de Willy Chirino, una sola pagina de 14 KB que carga en menos de un segundo.
+- [Notas](https://index01.net/notas/): notas tecnicas y novedades del estudio; casos reales contados con numeros verificables. Notas publicadas: la constitucion de Index01 LLC en Florida (solicitada el 24 de julio de 2026) y el EPK de 07 Sound Solution (07soundsolution.com), la web del ingeniero de sonido de Willy Chirino, una sola pagina de 14 KB que carga en menos de un segundo.
+- [Sobre el estudio](https://index01.net/sobre.html): la filosofia de Index01. La belleza como consecuencia de la intencion, la atencion como privilegio, codigo propio sin plantillas, y quien esta detras del estudio.
 - [Contacto](https://index01.net/contact.html): formulario, correo y telefono para empezar una conversacion. support@index01.net, +1 (786) 816-9791.
 
 ## Servicios
@@ -30,6 +35,7 @@
 ## Datos
 
 - Nombre: Index01
+- Entidad legal: Index01 LLC, constitucion solicitada en el estado de Florida el 24 de julio de 2026 (en tramite ante la Division de Corporaciones de Florida)
 - Tipo: estudio de diseno web, SEO y AEO
 - Ubicacion: estudio remoto, con base en Miami, Florida (atiende a distancia)
 - Zona de servicio: a distancia, en cualquier lugar; atencion en espanol e ingles
@@ -44,10 +50,15 @@ Index01 is a remote web design, SEO, and AEO studio, based in Miami, Florida, se
 
 - [Home](https://index01.net/en/)
 - [Services](https://index01.net/en/services.html)
+- [Custom web design](https://index01.net/en/web-design.html)
+- [Technical SEO](https://index01.net/en/technical-seo.html)
+- [AEO, optimization for AI answers](https://index01.net/en/aeo.html)
+- [Measurement and remarketing](https://index01.net/en/measurement.html)
 - [Process](https://index01.net/en/process.html)
 - [Maintenance](https://index01.net/en/maintenance.html)
 - [FAQ](https://index01.net/en/faq.html)
 - [Notes](https://index01.net/en/notes/)
+- [About the studio](https://index01.net/en/about.html)
 - [Contact](https://index01.net/en/contact.html)
 
 ## Nota
