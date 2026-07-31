@@ -20,7 +20,7 @@
 - [Proceso](https://index01.net/process.html): como trabaja Index01 paso a paso, desde el diagnostico hasta mantener el sitio vivo, con acuerdo claro por escrito antes de empezar.
 - [Mantenimiento](https://index01.net/maintenance.html): por que un sitio necesita actualizarse, los planes de mantenimiento, la garantia de 30 dias y las preguntas frecuentes.
 - [Preguntas frecuentes](https://index01.net/faq.html): respuestas comerciales directas, sin WordPress ni plantillas, webs estaticas editables, SEO frente a AEO, precios de referencia, propiedad del codigo y el dominio, y por que no hay un portfolio tradicional.
-- [Notas](https://index01.net/notas/): notas tecnicas y novedades del estudio; casos reales contados con numeros verificables. Notas publicadas: el ecosistema digital sano (por que la web, las fichas de Google Business, Yelp, Apple y Bing, y las redes sociales deben decir todas lo mismo), la constitucion de Index01 LLC en Florida (efectiva el 26 de julio de 2026) y el EPK de 07 Sound Solution (07soundsolution.com), la web del ingeniero de sonido de Willy Chirino, una sola pagina de 14 KB que carga en menos de un segundo.
+- [Notas](https://index01.net/notas/): notas tecnicas y novedades del estudio; casos reales contados con numeros verificables. Notas publicadas: el ecosistema digital sano (por que la web, las fichas de Google Business, Yelp, Apple y Bing, y las redes sociales deben decir todas lo mismo), la constitucion de Index01 LLC en Florida (julio de 2026) y el EPK de 07 Sound Solution (07soundsolution.com), la web del ingeniero de sonido de Willy Chirino, una sola pagina de 14 KB que carga en menos de un segundo.
 - [Sobre el estudio](https://index01.net/sobre.html): la filosofia de Index01. La belleza como consecuencia de la intencion, la atencion como privilegio, codigo propio sin plantillas, y quien esta detras del estudio.
 - [Contacto](https://index01.net/contact.html): formulario, correo y telefono para empezar una conversacion. support@index01.net, +1 (786) 816-9791.
 
@@ -35,7 +35,7 @@
 ## Datos
 
 - Nombre: Index01
-- Entidad legal: INDEX01 LLC, constituida en el estado de Florida (Division de Corporaciones, documento L26000393420, fecha efectiva 26 de julio de 2026)
+- Entidad legal: INDEX01 LLC, constituida en el estado de Florida en julio de 2026 (Division de Corporaciones, documento L26000393420)
 - Tipo: estudio de diseno web, SEO y AEO
 - Ubicacion: estudio remoto, con base en Miami, Florida (atiende a distancia)
 - Zona de servicio: a distancia, en cualquier lugar; atencion en espanol e ingles
