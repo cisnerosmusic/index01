@@ -56,7 +56,11 @@
 
   function build(host) {
     var cv = document.createElement("canvas");
-    var gl = cv.getContext("webgl") || cv.getContext("experimental-webgl");
+    /* failIfMajorPerformanceCaveat: si el WebGL seria por software (sin GPU,
+       p.ej. bots o maquinas virtuales), no hay contexto y la aurora no entra.
+       En CPU el shader cuesta cientos de ms por frame; en GPU es gratis. */
+    var GLOPTS = { failIfMajorPerformanceCaveat: true, powerPreference: "low-power", antialias: false };
+    var gl = cv.getContext("webgl", GLOPTS) || cv.getContext("experimental-webgl", GLOPTS);
     if (!gl) return;
     var prog = gl.createProgram();
     function sh(t, s) { var o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); return o; }
