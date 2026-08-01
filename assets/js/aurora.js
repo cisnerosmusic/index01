@@ -90,13 +90,17 @@
     var uRes = gl.getUniformLocation(prog, "uRes"), uTime = gl.getUniformLocation(prog, "uTime"),
         uL = gl.getUniformLocation(prog, "uL"), uR = gl.getUniformLocation(prog, "uR");
 
+    /* resize SOLO en init y en resize real (nunca dentro del loop:
+       getBoundingClientRect por frame fuerza un reflow de toda la pagina) */
     function resize() {
       var r = host.getBoundingClientRect();
       var bw = Math.max(2, Math.floor(r.width * 0.5)), bh = Math.max(2, Math.floor(r.height * 0.5));
       if (cv.width !== bw || cv.height !== bh) { cv.width = bw; cv.height = bh; }
       gl.viewport(0, 0, cv.width, cv.height); gl.uniform2f(uRes, cv.width, cv.height);
     }
-    resize(); window.addEventListener("resize", resize, { passive: true });
+    var rzT = null;
+    function onResize() { if (rzT) clearTimeout(rzT); rzT = setTimeout(resize, 150); }
+    resize(); window.addEventListener("resize", onResize, { passive: true });
 
     var t0 = (trigger === "load") ? performance.now() : null;
     if (trigger === "load") { host.classList.add("aurora-lit"); if (glowWrap) glowWrap.classList.add("lit"); }
@@ -109,17 +113,24 @@
     } else { visible = true; if (t0 === null) t0 = performance.now(); }
 
     var last = performance.now(), carry = 0, MINDT = 1 / 30;
+    var haloPrev = "", haloDone = false;
     function loop(now) {
       requestAnimationFrame(loop);
       if (!visible || document.hidden || t0 === null) return;
       var dt = Math.min((now - last) / 1000, 0.05); last = now; carry += dt;
       if (carry < MINDT) return; carry = 0;
       var el = (now - t0) / 1000;
-      host.style.setProperty("--halo", (1 - smooth(L[0], L[0] + 8, el)).toFixed(3));
+      /* --halo solo mientras el halo vive, y solo si el valor cambio:
+         escribir estilo por frame invalida el layout sin necesidad */
+      if (!haloDone) {
+        var hv = (1 - smooth(L[0], L[0] + 8, el)).toFixed(3);
+        if (hv !== haloPrev) { host.style.setProperty("--halo", hv); haloPrev = hv; }
+        if (el > L[0] + 8) haloDone = true;
+      }
       gl.uniform1f(uTime, el);
       gl.uniform1f(uL, smooth(L[0], L[1], el));
       gl.uniform1f(uR, smooth(R[0], R[1], el));
-      resize(); gl.drawArrays(gl.TRIANGLES, 0, 3);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
     }
     requestAnimationFrame(loop);
   }

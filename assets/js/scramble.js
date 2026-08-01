@@ -42,8 +42,12 @@
       }
     }
 
-    var frame = 0;
+    var frame = 0, skip = false;
     function update() {
+      /* el DOM se reescribe a 30fps (un frame si, uno no): mismo ritmo
+         visual de pizarra, la mitad de trabajo de layout */
+      if (skip) { skip = false; frame++; requestAnimationFrame(update); return; }
+      skip = true;
       var out = '';
       var done = 0;
       for (var j = 0; j < queue.length; j++) {
