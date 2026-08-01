@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es" data-motion data-aurora>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Consentimiento primero: gtag arranca denegado; Clarity solo se carga si el visitante acepta (consent.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-1ZM182ZFCE');
+  /* gtag.js se carga tras load+3s: la analitica no compite con las fuentes en la ventana del LCP */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE';
+      document.head.appendChild(s);
+    }, 3000);
+  });
+</script>
+<title>De 61 a 100 en una noche: anatomía de una auditoría | Notas | Index01</title>
+<meta name="description" content="PageSpeed le dio 61 a nuestra propia web. Esta es la autopsia completa: las tres causas, los tres arreglos y los números finales, verificables por cualquiera.">
+<link rel="canonical" href="https://index01.net/notas/de-61-a-100.html">
+<link rel="alternate" hreflang="es" href="https://index01.net/notas/de-61-a-100.html">
+<link rel="alternate" hreflang="en" href="https://index01.net/en/notes/from-61-to-100.html">
+<link rel="alternate" hreflang="x-default" href="https://index01.net/notas/de-61-a-100.html">
+<meta name="theme-color" content="#090A0E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Index01">
+<meta property="og:title" content="De 61 a 100 en una noche: anatomía de una auditoría de rendimiento">
+<meta property="og:description" content="PageSpeed le dio 61 a nuestra propia web. La autopsia completa: tres causas, tres arreglos y la tabla perfecta, verificable por cualquiera.">
+<meta property="og:url" content="https://index01.net/notas/de-61-a-100.html">
+<meta property="og:image" content="https://index01.net/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Index01 - Diseño web, SEO y AEO">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="article:published_time" content="2026-08-01">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://index01.net/assets/img/og-image.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/martianmono-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/motion.css">
+<link rel="stylesheet" href="/assets/css/aurora.css">
+<style>
+/* medidores estilo PageSpeed, en CSS puro: esta nota no carga ni una imagen */
+.gauges{display:flex;flex-wrap:wrap;gap:clamp(18px,3vw,36px);justify-content:center;margin-top:26px}
+.gauge{display:flex;flex-direction:column;align-items:center;gap:10px}
+.gauge .ring{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;
+  background:conic-gradient(var(--g-col) calc(var(--g-val)*1%),var(--line) 0)}
+.gauge .ring>span{width:82px;height:82px;border-radius:50%;background:var(--panel);display:grid;place-items:center;
+  font-family:var(--font-display);font-stretch:125%;font-weight:800;font-size:1.7rem;color:var(--g-col)}
+.gauge .lbl{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);text-align:center}
+.g-bad{--g-col:#E8833A}.g-ok{--g-col:var(--accent)}
+.tbl-perf{width:100%;border-collapse:collapse;margin-top:22px;font-size:.95rem}
+.tbl-perf th,.tbl-perf td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left}
+.tbl-perf th{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:600}
+.tbl-perf td.antes{color:#E8833A}.tbl-perf td.ahora{color:var(--accent);font-weight:700}
+.tbl-perf td:first-child{color:var(--text-soft)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://index01.net/notas/de-61-a-100.html",
+  "mainEntityOfPage": "https://index01.net/notas/de-61-a-100.html",
+  "headline": "De 61 a 100 en una noche: anatomía de una auditoría de rendimiento",
+  "description": "PageSpeed Insights le dio 61 a la propia web de Index01. La autopsia completa: un efecto que leía el layout en cada fotograma, la analítica compitiendo con las fuentes y unos servidores de medición sin GPU. Tres arreglos y la tabla perfecta, con números verificables.",
+  "inLanguage": "es",
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-01",
+  "author": { "@id": "https://index01.net/#org" },
+  "publisher": { "@id": "https://index01.net/#org" },
+  "image": "https://index01.net/assets/img/og-image.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "inLanguage": "es",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://index01.net/" },
+    { "@type": "ListItem", "position": 2, "name": "Notas", "item": "https://index01.net/notas/" },
+    { "@type": "ListItem", "position": 3, "name": "De 61 a 100", "item": "https://index01.net/notas/de-61-a-100.html" }
+  ]
+}
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "5c8d6c10b9e9449ba1bc7232a4398ba1"}'></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="Index01, inicio">
+      <span>index<b>01</b></span>
+    </a>
+    <nav aria-label="Principal">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/services.html">Servicios</a></li>
+        <li><a href="/process.html">Proceso</a></li>
+        <li><a href="/maintenance.html">Mantenimiento</a></li>
+        <li><a href="/faq.html">Preguntas</a></li>
+        <li><a href="/notas/">Notas</a></li>
+        <li class="nav-lang"><a href="/en/notes/from-61-to-100.html" hreflang="en" aria-label="View in English">EN</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="/contact.html">Hablemos <span class="arrow">&rarr;</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding-block:clamp(60px,9vw,110px)">
+  <div class="wrap">
+    <span class="eyebrow"><span class="idx">[ nota ]</span> Caso técnico &middot; <span class="mono">2026-08-01</span></span>
+    <h1>De 61 a 100 <span class="lime">en una noche</span>.</h1>
+    <p class="lede">El 31 de julio, PageSpeed Insights le dio 61 puntos de rendimiento en escritorio a nuestra propia web. Sí, a la web del estudio que vende velocidad. Podríamos habernos callado; preferimos contarlo con números, porque así se ve nuestro mantenimiento por dentro: se mide, se encuentra la causa de verdad y se corrige sin sacrificar el diseño. Unas horas después, la misma herramienta marcaba 100.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">[01]</span> El punto de partida</span>
+      <h2>Lo que dijo el medidor.</h2>
+      <p class="lede">Tres cifras contaban el problema: 910 milisegundos de bloqueo del hilo principal en escritorio, 18 segundos de trabajo acumulado de CPU y un titular que en móvil tardaba 3.9 segundos en asentarse. La página se veía bien; por debajo, gastaba de más.</p>
+    </div>
+    <div class="gauges reveal" role="img" aria-label="Puntuaciones de PageSpeed antes de la corrección: escritorio 61, móvil 86">
+      <div class="gauge g-bad"><div class="ring" style="--g-val:61"><span>61</span></div><span class="lbl">Escritorio &middot; antes</span></div>
+      <div class="gauge g-bad"><div class="ring" style="--g-val:86"><span>86</span></div><span class="lbl">Móvil &middot; antes</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">[02]</span> La autopsia</span>
+      <h2>Tres causas, ninguna evidente.</h2>
+    </div>
+    <div class="grid cols-3">
+      <article class="card feature reveal">
+        <span class="num">01 / El efecto que preguntaba de más</span>
+        <h3>Un reflow por fotograma</h3>
+        <p>Nuestra aurora del hero corre en la tarjeta gráfica y es casi gratis. Pero su código le preguntaba al navegador "¿cuánto mides?" en cada fotograma, y esa pregunta obliga a recalcular el layout de toda la página 30 veces por segundo. El efecto no era caro; la pregunta sí.</p>
+        <span class="tag tag-accent">El 90% del problema</span>
+      </article>
+      <article class="card feature reveal">
+        <span class="num">02 / La tubería compartida</span>
+        <h3>Analítica contra tipografía</h3>
+        <p>En una conexión 4G, los 130 KB de Google Analytics bajaban en paralelo con la fuente del titular. Resultado: el texto principal esperaba su turno detrás de un script que nadie ve. El visitante pagaba esa cola con segundos de espera.</p>
+        <span class="tag tag-accent">El LCP móvil</span>
+      </article>
+      <article class="card feature reveal">
+        <span class="num">03 / El detalle de laboratorio</span>
+        <h3>Los medidores no tienen GPU</h3>
+        <p>Los servidores de PageSpeed no tienen tarjeta gráfica: emulan WebGL en CPU, donde nuestro efecto costaba cientos de milisegundos que ningún visitante real paga. Saber dónde te miden, y qué hardware tiene el que mide, también es parte del oficio.</p>
+        <span class="tag tag-accent">El hallazgo curioso</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">[03]</span> La corrección</span>
+      <h2>Cuatro cambios quirúrgicos, cero cambios visibles.</h2>
+      <p class="lede">Ningún efecto se eliminó y el diseño no se tocó. Cada pieza pasó a correr donde le corresponde.</p>
+    </div>
+    <div class="grid cols-2">
+      <article class="card feature reveal">
+        <h3>La aurora dejó de preguntar</h3>
+        <p>Ahora mide su tamaño una sola vez, y otra vez solo si la ventana cambia de verdad. Y aprendió a retirarse con elegancia: si detecta una máquina sin tarjeta gráfica (un robot de medición, una máquina virtual), no se enciende. Nuestra filosofía siempre dijo que las capas de animación son opcionales y separables; ahora lo cumple hasta con los bots.</p>
+      </article>
+      <article class="card feature reveal">
+        <h3>Cada byte en su turno</h3>
+        <p>La analítica ahora espera 3 segundos después de que la página termina de cargar: misma medición, mismo consentimiento, pero fuera del camino del contenido. Y las fuentes se subsetearon a los caracteres que el sitio de verdad usa: 20% menos de peso sin perder un solo acento, flecha o comilla tipográfica.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">[04]</span> El resultado</span>
+      <h2>Medido por Google, la misma noche.</h2>
+    </div>
+    <div class="gauges reveal" role="img" aria-label="Puntuaciones de PageSpeed después de la corrección: escritorio 100, móvil 100">
+      <div class="gauge g-ok"><div class="ring" style="--g-val:100"><span>100</span></div><span class="lbl">Escritorio &middot; después</span></div>
+      <div class="gauge g-ok"><div class="ring" style="--g-val:100"><span>100</span></div><span class="lbl">Móvil &middot; después</span></div>
+    </div>
+    <div class="reveal" style="overflow-x:auto">
+      <table class="tbl-perf">
+        <thead><tr><th>Métrica</th><th>Antes</th><th>Después</th></tr></thead>
+        <tbody>
+          <tr><td>Rendimiento escritorio</td><td class="antes">61</td><td class="ahora">100</td></tr>
+          <tr><td>Rendimiento móvil</td><td class="antes">86</td><td class="ahora">100</td></tr>
+          <tr><td>Bloqueo del hilo principal (escritorio)</td><td class="antes">910 ms</td><td class="ahora">0 ms</td></tr>
+          <tr><td>Titular asentado en móvil (LCP)</td><td class="antes">3.9 s</td><td class="ahora">1.7 s</td></tr>
+          <tr><td>Speed Index móvil</td><td class="antes">4.4 s</td><td class="ahora">0.9 s</td></tr>
+          <tr><td>Saltos de contenido (CLS)</td><td class="antes">0</td><td class="ahora">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:28px" class="reveal">
+      <div class="note">
+        <span class="eyebrow"><span class="idx">[ &check; ]</span> Compruébalo tú mismo</span>
+        <p style="margin:0">Nada de esto pide un acto de fe: abre PageSpeed Insights, escribe index01.net y corre la prueba. Los números de esta nota son de la madrugada del 1 de agosto de 2026 y varían un par de puntos entre corridas, como toda medición honesta. Esa es la diferencia entre un caso de estudio y un alarde: el caso se puede repetir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid cols-2" style="align-items:center;gap:clamp(28px,5vw,64px)">
+      <div class="reveal">
+        <span class="eyebrow"><span class="idx">[05]</span> La moraleja</span>
+        <h2 style="margin-top:1rem">La velocidad no es un número: es un hábito.</h2>
+      </div>
+      <div class="reveal">
+        <p class="lede">Un sitio rápido el día del estreno puede dejar de serlo seis meses después, sin que nadie toque nada: se acumulan scripts, cambian los medidores, crecen las fuentes. Por eso nuestro <a href="/maintenance.html">mantenimiento</a> incluye auditar con regularidad y corregir la causa real, no el síntoma. Esta nota es, literalmente, ese servicio aplicado a nosotros mismos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal" data-aurora-host data-trigger="view" data-l="0.8,5" data-r="2.5,8.5">
+      <span class="eyebrow" style="justify-content:center"><span class="idx">[ &rarr; ]</span> Tu web</span>
+      <h2 style="margin-top:1rem">¿Cuánto marca la tuya?</h2>
+      <p>Corre PageSpeed sobre tu sitio. Si el número no te gusta, cuéntanos qué marcó y te decimos, sin compromiso, dónde suele estar la causa.</p>
+      <a class="btn btn-primary" href="/contact.html">Hablemos <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Index01"><span>index<b style="color:var(--accent)">01</b></span></a>
+        <p>Web Design, SEO y AEO en remoto. Sitios rápidos y seguros, construidos para ser la respuesta que dan los buscadores y los asistentes de IA.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><a href="/">Inicio</a><a href="/services.html">Servicios</a><a href="/process.html">Proceso</a><a href="/maintenance.html">Mantenimiento</a><a href="/faq.html">Preguntas</a><a href="/notas/">Notas</a><a href="/sobre.html">Sobre el estudio</a><a href="/contact.html">Contacto</a><a href="/legal.html">Aviso legal</a></div>
+        <div class="footer-col"><span class="footer-h">Contacto</span><a href="mailto:support@index01.net">support@index01.net</a><a href="tel:+17868169791">(786) 816-9791</a><a href="/contact.html">Formulario</a><a href="https://x.com/Index01_net" target="_blank" rel="noopener">X (@Index01_net)</a><a href="https://www.facebook.com/index01.net" target="_blank" rel="noopener">Facebook (@index01.net)</a><a href="https://www.instagram.com/index01net" target="_blank" rel="noopener">Instagram (@index01net)</a><a href="https://www.linkedin.com/company/index01" target="_blank" rel="noopener">LinkedIn (Index01)</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Index01 &middot; index01.net</span>
+      <span>Diseño a medida &middot; SEO &middot; AEO &middot; <a href="#" data-consent-open>Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/motion.js" defer></script>
+<script src="/assets/js/aurora.js" defer></script>
+<script src="/assets/js/consent.js" defer></script>
+</body>
+</html>
