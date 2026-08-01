@@ -15,8 +15,16 @@
   });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
+  /* gtag.js se carga tras load+3s: la analitica no compite con las fuentes en la ventana del LCP */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE';
+      document.head.appendChild(s);
+    }, 3000);
+  });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>El ecosistema: tu web y tus redes contando la misma verdad | Notas | Index01</title>
 <meta name="description" content="Por qué un negocio necesita que su web, sus redes y sus fichas (Google Business, Yelp, Apple, Bing) digan exactamente lo mismo, y qué pasa cuando no lo hacen.">
 <link rel="canonical" href="https://index01.net/notas/ecosistema-digital.html">

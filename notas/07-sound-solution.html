@@ -15,8 +15,16 @@
   });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
+  /* gtag.js se carga tras load+3s: la analitica no compite con las fuentes en la ventana del LCP */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE';
+      document.head.appendChild(s);
+    }, 3000);
+  });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>07 Sound Solution: una credencial de 14 KB | Notas | Index01</title>
 <meta name="description" content="Caso técnico: el EPK del ingeniero de sonido de Willy Chirino. Una sola página de 14 KB que carga en menos de un segundo, bilingüe, con datos estructurados completos y sin rastreadores.">
 <link rel="canonical" href="https://index01.net/notas/07-sound-solution.html">

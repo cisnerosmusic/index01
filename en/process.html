@@ -15,8 +15,16 @@
   });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
+  /* gtag.js se carga tras load+3s: la analitica no compite con las fuentes en la ventana del LCP */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE';
+      document.head.appendChild(s);
+    }, 3000);
+  });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>Process | How we work, step by step | Index01</title>
 <meta name="description" content="How Index01 builds a site: business diagnosis, materials up front, staged design, technical build, measurement, and launch. A clear agreement before we start.">
 <link rel="canonical" href="https://index01.net/en/process.html">

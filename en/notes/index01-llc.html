@@ -15,8 +15,16 @@
   });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
+  /* gtag.js se carga tras load+3s: la analitica no compite con las fuentes en la ventana del LCP */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE';
+      document.head.appendChild(s);
+    }, 3000);
+  });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>Index01 LLC: the studio puts down roots in Florida | Notes | Index01</title>
 <meta name="description" content="Index01 LLC is now incorporated in Florida, filed July 24, 2026. What this step means for the studio and its clients.">
 <link rel="canonical" href="https://index01.net/en/notes/index01-llc.html">

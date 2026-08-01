@@ -15,8 +15,16 @@
   });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
+  /* gtag.js se carga tras load+3s: la analitica no compite con las fuentes en la ventana del LCP */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE';
+      document.head.appendChild(s);
+    }, 3000);
+  });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>Contact | Tell us what you do | Index01</title>
 <meta name="description" content="Let's talk about your business. Tell us what you do and we'll tell you how we build you to be found by people and AI. Index01: web design, SEO, and AEO, fully remote.">
 <link rel="canonical" href="https://index01.net/en/contact.html">

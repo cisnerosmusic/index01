@@ -15,8 +15,16 @@
   });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
+  /* gtag.js se carga tras load+3s: la analitica no compite con las fuentes en la ventana del LCP */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE';
+      document.head.appendChild(s);
+    }, 3000);
+  });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>Preguntas frecuentes | Respuestas claras, sin humo | Index01</title>
 <meta name="description" content="Respuestas directas sobre cómo trabaja Index01: sin plantillas ni WordPress, webs estáticas que sí se editan, SEO frente a AEO, precios, propiedad del código y por qué no hay portfolio tradicional.">
 <link rel="canonical" href="https://index01.net/faq.html">

@@ -15,8 +15,16 @@
   });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
+  /* gtag.js se carga tras load+3s: la analitica no compite con las fuentes en la ventana del LCP */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE';
+      document.head.appendChild(s);
+    }, 3000);
+  });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>07 Sound Solution: a 14 KB credential | Notes | Index01</title>
 <meta name="description" content="Case note: the press kit of Willy Chirino's sound engineer. A single 14 KB page that loads in under a second, bilingual, with complete structured data and zero trackers.">
 <link rel="canonical" href="https://index01.net/en/notes/07-sound-solution.html">

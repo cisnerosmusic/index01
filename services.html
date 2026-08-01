@@ -15,8 +15,16 @@
   });
   gtag('js', new Date());
   gtag('config', 'G-1ZM182ZFCE');
+  /* gtag.js se carga tras load+3s: la analitica no compite con las fuentes en la ventana del LCP */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE';
+      document.head.appendChild(s);
+    }, 3000);
+  });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZM182ZFCE"></script>
 <title>Servicios | Diseño web, SEO, AEO y medición | Index01</title>
 <meta name="description" content="Servicios de Index01: diseño web a medida, SEO técnico, AEO para que la IA te cite y medición con remarketing. Cada servicio explicado con claridad.">
 <link rel="canonical" href="https://index01.net/services.html">
