@@ -141,8 +141,13 @@
           </div>
 
           <div class="field">
-            <label for="business">Your business or current site</label>
-            <input id="business" name="business" type="text" placeholder="Business name, or your site if you already have one">
+            <label for="phone">Phone or WhatsApp (optional)</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="If you'd rather hear back there, leave it here">
+          </div>
+
+          <div class="field">
+            <label for="business">Your business, your site, or a link</label>
+            <input id="business" name="business" type="text" placeholder="The business name, your site, or a link to your Google Maps or Instagram. One link is enough for us to start looking.">
           </div>
 
           <div class="field">
@@ -151,8 +156,10 @@
               <option value="new-site">A new site from scratch</option>
               <option value="rebuild">Rebuild the one I have</option>
               <option value="seo-aeo">SEO and AEO so I get cited</option>
+              <option value="channel-cleanup">Clean up my channels (Google, social, listings)</option>
               <option value="measurement">Measurement and remarketing</option>
               <option value="maintenance">Maintenance for my site</option>
+              <option value="not-sure">I don't know yet, that's why I'm writing</option>
               <option value="other">Something else, I'll explain below</option>
             </select>
           </div>
@@ -169,8 +176,18 @@
           </div>
 
           <div class="field">
+            <label for="timeline">When do you need it? (optional)</label>
+            <select id="timeline" name="timeline">
+              <option value="no-date">No date, just exploring</option>
+              <option value="asap">As soon as possible</option>
+              <option value="1-3-months">Within one to three months</option>
+              <option value="specific-date">There's a specific date, I'll explain below</option>
+            </select>
+          </div>
+
+          <div class="field">
             <label for="message">Tell us</label>
-            <textarea id="message" name="message" required placeholder="What you do, what you'd like to achieve, and any references you like."></textarea>
+            <textarea id="message" name="message" required placeholder="What you do, what you'd like to achieve, and any references you like. And if your current presence is a mess (accounts you don't control, lost passwords, duplicate listings), tell us without embarrassment: cleaning that up is part of the job."></textarea>
           </div>
 
           <button class="btn btn-primary" type="submit">Send message <span class="arrow">&rarr;</span></button>
@@ -184,6 +201,7 @@
         <div class="line"><span class="k">Where</span><span>Remote, with clients wherever they are. Based in Miami, FL.</span></div>
         <div class="line"><span class="k">Response</span><span>Within 24 business hours.</span></div>
         <div class="line"><span class="k">How we work</span><span>A clear written agreement before we start. 50% deposit, the rest before launch. The domain and accounts are yours.</span></div>
+        <div class="line"><span class="k">Before we reply</span><span>We look at what already exists of your business online: your Google listing, your social profiles, your site if there is one. We arrive at the first conversation with the homework done, not with a questionnaire.</span></div>
 
         <div class="note" style="margin-top:26px">
           <span class="eyebrow"><span class="idx">[ no commitment ]</span> First step</span>

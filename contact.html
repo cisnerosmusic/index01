@@ -141,8 +141,13 @@
           </div>
 
           <div class="field">
-            <label for="negocio">Tu negocio o web actual</label>
-            <input id="negocio" name="negocio" type="text" placeholder="Nombre del negocio, o tu sitio si ya tienes uno">
+            <label for="telefono">Teléfono o WhatsApp (opcional)</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="Si prefieres que te respondamos por ahí, déjalo aquí">
+          </div>
+
+          <div class="field">
+            <label for="negocio">Tu negocio, tu web o un enlace</label>
+            <input id="negocio" name="negocio" type="text" placeholder="El nombre del negocio, tu sitio, o un enlace a tu Google Maps o Instagram. Con un enlace nos basta para empezar a mirar.">
           </div>
 
           <div class="field">
@@ -151,8 +156,10 @@
               <option value="sitio-nuevo">Un sitio nuevo desde cero</option>
               <option value="rehacer">Rehacer el que ya tengo</option>
               <option value="seo-aeo">SEO y AEO para que me citen</option>
+              <option value="orden-canales">Poner orden en mis canales (Google, redes, fichas)</option>
               <option value="medicion">Medición y remarketing</option>
               <option value="mantenimiento">Mantenimiento de mi web</option>
+              <option value="no-se">Todavía no lo sé, por eso escribo</option>
               <option value="otro">Otra cosa, te explico abajo</option>
             </select>
           </div>
@@ -169,8 +176,18 @@
           </div>
 
           <div class="field">
+            <label for="plazo">¿Para cuándo? (opcional)</label>
+            <select id="plazo" name="plazo">
+              <option value="sin-fecha">Sin fecha, estoy explorando</option>
+              <option value="antes-posible">Lo antes posible</option>
+              <option value="1-3-meses">En uno a tres meses</option>
+              <option value="fecha-concreta">Hay una fecha concreta, la explico abajo</option>
+            </select>
+          </div>
+
+          <div class="field">
             <label for="mensaje">Cuéntanos</label>
-            <textarea id="mensaje" name="mensaje" required placeholder="A qué te dedicas, qué te gustaría lograr, y cualquier referencia que te guste."></textarea>
+            <textarea id="mensaje" name="mensaje" required placeholder="A qué te dedicas, qué te gustaría lograr y cualquier referencia que te guste. Y si tu presencia actual está en desorden (cuentas que no controlas, contraseñas perdidas, fichas duplicadas), cuéntanoslo sin pena: poner orden es parte del trabajo."></textarea>
           </div>
 
           <button class="btn btn-primary" type="submit">Enviar mensaje <span class="arrow">&rarr;</span></button>
@@ -184,6 +201,7 @@
         <div class="line"><span class="k">Dónde</span><span>En remoto, con clientes donde estén. Con base en Miami, FL.</span></div>
         <div class="line"><span class="k">Respuesta</span><span>Menos de 24 horas hábiles.</span></div>
         <div class="line"><span class="k">Cómo trabajamos</span><span>Acuerdo claro por escrito antes de empezar. Depósito del 50%, el resto antes de publicar. El dominio y las cuentas son tuyas.</span></div>
+        <div class="line"><span class="k">Antes de responder</span><span>Miramos lo que ya existe de tu negocio en internet: tu ficha de Google, tus redes, tu web si la hay. Llegamos a la primera conversación con la tarea hecha, no con un cuestionario.</span></div>
 
         <div class="note" style="margin-top:26px">
           <span class="eyebrow"><span class="idx">[ sin compromiso ]</span> Primer paso</span>
